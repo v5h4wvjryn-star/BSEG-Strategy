@@ -109,259 +109,176 @@ function App() {
       </section>
 
       {/* The 5 Divisions */}
-      <section id="divisions" className="section-container bg-gradient-to-br from-blue-star-50 to-white">
-        <h2 className="section-title text-center mb-16">The Five Pillars of Blue Star</h2>
+      <section id="divisions" className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-gray-900 via-blue-star-950 to-gray-900">
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-4xl sm:text-5xl font-bold text-center mb-4">
+            Highlighted <span className="text-blue-star-400">Pillars</span>
+          </h2>
+          <p className="text-center text-gray-400 mb-16 text-lg">The Five Divisions of Blue Star Equity Group</p>
 
-        <div className="space-y-8">
-          {/* Division 1 - BSHI */}
-          <div className="bg-white rounded-2xl shadow-lg p-8 hover:shadow-xl transition">
-            <div className="flex items-start">
-              <div className="bg-blue-star-100 rounded-full w-12 h-12 flex items-center justify-center flex-shrink-0 mr-6">
-                <span className="text-2xl font-bold text-blue-star-700">1</span>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {/* Division 1 - BSHI */}
+            <div className="bg-gray-800 bg-opacity-50 backdrop-blur border border-gray-700 rounded-2xl p-8 hover:border-blue-star-500 hover:shadow-lg hover:shadow-blue-star-500/20 transition-all duration-300 group">
+              <div className="mb-6">
+                <svg className="w-12 h-12 text-blue-star-400 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                </svg>
+                <h3 className="text-2xl font-bold text-white mb-3">Blue Star Heritage Insurance (BSHI)</h3>
+                <p className="text-gray-300 leading-relaxed mb-6">
+                  Texas-based independent insurance agency serving families, businesses, real estate investors, and municipal entities. Specializing in personal lines, commercial coverage, landlord policies, and government/public sector insurance programs.
+                </p>
               </div>
-              <div className="flex-1">
-                <h3 className="text-2xl font-bold text-gray-900 mb-3">Blue Star Heritage Insurance (BSHI)</h3>
-                <p className="text-gray-600 mb-4 italic">The Foundation of Recurring Revenue</p>
-
-                <div className="mb-6">
-                  <h4 className="font-semibold text-gray-900 mb-3">Specializing In:</h4>
-                  <div className="grid md:grid-cols-2 gap-3">
-                    <div className="flex items-center text-gray-700">
-                      <span className="text-blue-star-500 mr-2">•</span> Home & Auto
-                    </div>
-                    <div className="flex items-center text-gray-700">
-                      <span className="text-blue-star-500 mr-2">•</span> Commercial Properties
-                    </div>
-                    <div className="flex items-center text-gray-700">
-                      <span className="text-blue-star-500 mr-2">•</span> Landlord Policies
-                    </div>
-                    <div className="flex items-center text-gray-700">
-                      <span className="text-blue-star-500 mr-2">•</span> Investor Portfolios
-                    </div>
-                    <div className="flex items-center text-gray-700">
-                      <span className="text-blue-star-500 mr-2">•</span> Contractors & Builders
-                    </div>
-                    <div className="flex items-center text-gray-700">
-                      <span className="text-blue-star-500 mr-2">•</span> Hard-Money Lending Packages
-                    </div>
-                  </div>
-                </div>
-
-                <div className="bg-blue-star-50 p-6 rounded-lg">
-                  <h4 className="font-semibold text-gray-900 mb-3">Why Insurance is the Foundation:</h4>
-                  <div className="grid md:grid-cols-3 gap-3 text-sm">
-                    <div>✓ Recurring revenue</div>
-                    <div>✓ Predictable cash flow</div>
-                    <div>✓ Compounding renewals</div>
-                    <div>✓ High-margin business</div>
-                    <div>✓ Cross-sells across divisions</div>
-                    <div>✓ Low capital requirement</div>
-                    <div>✓ Immediate credibility</div>
-                  </div>
-                </div>
-
-                <div className="mt-6">
-                  <button
-                    onClick={() => setShowBSHIModal(true)}
-                    className="bg-blue-star-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-star-700 transition shadow-md hover:shadow-lg"
-                  >
-                    Read Full Business Plan →
-                  </button>
-                </div>
+              <div className="space-y-3">
+                <button
+                  onClick={() => setShowBSHIModal(true)}
+                  className="w-full text-blue-star-400 hover:text-blue-star-300 font-semibold flex items-center justify-center group-hover:translate-x-1 transition-transform"
+                >
+                  Read Full Business Plan
+                  <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </button>
+                <a
+                  href="#"
+                  className="w-full text-gray-400 hover:text-white font-semibold flex items-center justify-center group-hover:translate-x-1 transition-transform"
+                >
+                  Visit Website
+                  <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </a>
               </div>
             </div>
-          </div>
 
-          {/* Division 2 - Property Holdings */}
-          <div className="bg-white rounded-2xl shadow-lg p-8 hover:shadow-xl transition">
-            <div className="flex items-start">
-              <div className="bg-blue-star-100 rounded-full w-12 h-12 flex items-center justify-center flex-shrink-0 mr-6">
-                <span className="text-2xl font-bold text-blue-star-700">2</span>
+            {/* Division 2 - Property Holdings */}
+            <div className="bg-gray-800 bg-opacity-50 backdrop-blur border border-gray-700 rounded-2xl p-8 hover:border-blue-star-500 hover:shadow-lg hover:shadow-blue-star-500/20 transition-all duration-300 group">
+              <div className="mb-6">
+                <svg className="w-12 h-12 text-blue-star-400 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+                </svg>
+                <h3 className="text-2xl font-bold text-white mb-3">Blue Star Property Holdings</h3>
+                <p className="text-gray-300 leading-relaxed mb-6">
+                  Real estate investment division focused on BRRRR rentals, long-term holds, fix-and-flip partnerships, and distressed property acquisition. Building long-term equity with tax advantages while creating collateral for FinCo lending operations.
+                </p>
               </div>
-              <div className="flex-1">
-                <h3 className="text-2xl font-bold text-gray-900 mb-3">Blue Star Property Holdings</h3>
-                <p className="text-gray-600 mb-4 italic">Building Long-Term Equity</p>
-
-                <div className="mb-6">
-                  <h4 className="font-semibold text-gray-900 mb-3">Investment Strategies:</h4>
-                  <div className="grid md:grid-cols-2 gap-3">
-                    <div className="flex items-center text-gray-700">
-                      <span className="text-blue-star-500 mr-2">•</span> BRRRR rentals
-                    </div>
-                    <div className="flex items-center text-gray-700">
-                      <span className="text-blue-star-500 mr-2">•</span> Long-term holds
-                    </div>
-                    <div className="flex items-center text-gray-700">
-                      <span className="text-blue-star-500 mr-2">•</span> Fix-and-flip partnerships
-                    </div>
-                    <div className="flex items-center text-gray-700">
-                      <span className="text-blue-star-500 mr-2">•</span> Private equity RE deals
-                    </div>
-                    <div className="flex items-center text-gray-700">
-                      <span className="text-blue-star-500 mr-2">•</span> New construction partnerships
-                    </div>
-                    <div className="flex items-center text-gray-700">
-                      <span className="text-blue-star-500 mr-2">•</span> Distressed property acquisition
-                    </div>
-                  </div>
-                </div>
-
-                <div className="bg-blue-star-50 p-6 rounded-lg">
-                  <h4 className="font-semibold text-gray-900 mb-3">Why This Matters:</h4>
-                  <div className="grid md:grid-cols-3 gap-3 text-sm">
-                    <div>✓ Builds long-term equity</div>
-                    <div>✓ Tax advantages</div>
-                    <div>✓ Consistent net worth growth</div>
-                    <div>✓ Collateral for FinCo</div>
-                    <div>✓ Passive income foundation</div>
-                    <div>✓ Long-term appreciation</div>
-                  </div>
-                </div>
+              <div className="space-y-3">
+                <a
+                  href="#"
+                  className="w-full text-blue-star-400 hover:text-blue-star-300 font-semibold flex items-center justify-center group-hover:translate-x-1 transition-transform"
+                >
+                  View Portfolio
+                  <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </a>
+                <a
+                  href="#"
+                  className="w-full text-gray-400 hover:text-white font-semibold flex items-center justify-center group-hover:translate-x-1 transition-transform"
+                >
+                  Visit Website
+                  <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </a>
               </div>
             </div>
-          </div>
 
-          {/* Division 3 - FinCo */}
-          <div className="bg-white rounded-2xl shadow-lg p-8 hover:shadow-xl transition border-2 border-blue-star-200">
-            <div className="flex items-start">
-              <div className="bg-blue-star-600 rounded-full w-12 h-12 flex items-center justify-center flex-shrink-0 mr-6">
-                <span className="text-2xl font-bold text-white">3</span>
+            {/* Division 3 - FinCo */}
+            <div className="bg-gray-800 bg-opacity-50 backdrop-blur border border-gray-700 rounded-2xl p-8 hover:border-blue-star-500 hover:shadow-lg hover:shadow-blue-star-500/20 transition-all duration-300 group">
+              <div className="mb-6">
+                <svg className="w-12 h-12 text-blue-star-400 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <h3 className="text-2xl font-bold text-white mb-3">Blue Star FinCo</h3>
+                <p className="text-gray-300 leading-relaxed mb-6">
+                  Private lending division offering hard-money loans (12-14% + points), bridge financing, flip funding, and construction draws. Launches Year 3-4 when BSHI cash flow supports responsible expansion. Double revenue model: earn interest + insurance commissions.
+                </p>
               </div>
-              <div className="flex-1">
-                <h3 className="text-2xl font-bold text-gray-900 mb-3">Blue Star FinCo</h3>
-                <p className="text-gray-600 mb-4 italic">Private Lending & High Returns</p>
-
-                <div className="mb-6">
-                  <h4 className="font-semibold text-gray-900 mb-3">Lending Services (Launch: Year 3-4):</h4>
-                  <div className="grid md:grid-cols-2 gap-3">
-                    <div className="flex items-center text-gray-700">
-                      <span className="text-blue-star-500 mr-2">•</span> Hard-money loans (12-14% + points)
-                    </div>
-                    <div className="flex items-center text-gray-700">
-                      <span className="text-blue-star-500 mr-2">•</span> Bridge loans
-                    </div>
-                    <div className="flex items-center text-gray-700">
-                      <span className="text-blue-star-500 mr-2">•</span> Flip financing
-                    </div>
-                    <div className="flex items-center text-gray-700">
-                      <span className="text-blue-star-500 mr-2">•</span> Construction draws
-                    </div>
-                    <div className="flex items-center text-gray-700">
-                      <span className="text-blue-star-500 mr-2">•</span> Equipment loans
-                    </div>
-                    <div className="flex items-center text-gray-700">
-                      <span className="text-blue-star-500 mr-2">•</span> Rental acquisition loans
-                    </div>
-                  </div>
-                </div>
-
-                <div className="bg-blue-star-50 p-6 rounded-lg">
-                  <h4 className="font-semibold text-gray-900 mb-3">The FinCo Advantage:</h4>
-                  <div className="space-y-2 text-sm">
-                    <div>✓ HIGH profit with LOW workload</div>
-                    <div>✓ Require borrowers to use BSHI (double revenue)</div>
-                    <div>✓ Finance deals that we ALSO insure</div>
-                    <div>✓ Earn both interest + insurance commissions</div>
-                    <div>✓ Choose only collateralized, low-risk deals</div>
-                  </div>
-                  <p className="mt-4 text-xs text-gray-600 italic">
-                    Note: FinCo launches only when BSHI cash flow can support it responsibly.
-                  </p>
-                </div>
+              <div className="space-y-3">
+                <a
+                  href="#"
+                  className="w-full text-blue-star-400 hover:text-blue-star-300 font-semibold flex items-center justify-center group-hover:translate-x-1 transition-transform"
+                >
+                  Learn About Lending
+                  <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </a>
+                <a
+                  href="#"
+                  className="w-full text-gray-400 hover:text-white font-semibold flex items-center justify-center group-hover:translate-x-1 transition-transform"
+                >
+                  Visit Website
+                  <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </a>
               </div>
             </div>
-          </div>
 
-          {/* Division 4 - Property Management */}
-          <div className="bg-white rounded-2xl shadow-lg p-8 hover:shadow-xl transition">
-            <div className="flex items-start">
-              <div className="bg-blue-star-100 rounded-full w-12 h-12 flex items-center justify-center flex-shrink-0 mr-6">
-                <span className="text-2xl font-bold text-blue-star-700">4</span>
+            {/* Division 4 - Property Management */}
+            <div className="bg-gray-800 bg-opacity-50 backdrop-blur border border-gray-700 rounded-2xl p-8 hover:border-blue-star-500 hover:shadow-lg hover:shadow-blue-star-500/20 transition-all duration-300 group lg:col-start-2">
+              <div className="mb-6">
+                <svg className="w-12 h-12 text-blue-star-400 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" />
+                </svg>
+                <h3 className="text-2xl font-bold text-white mb-3">Blue Star Property Management</h3>
+                <p className="text-gray-300 leading-relaxed mb-6">
+                  Property management services for Blue Star-owned rentals and external landlord clients. Offering tenant placement, maintenance coordination, rent collection, and owner reporting. Creates recurring revenue while controlling quality and expenses.
+                </p>
               </div>
-              <div className="flex-1">
-                <h3 className="text-2xl font-bold text-gray-900 mb-3">Blue Star Property Management</h3>
-                <p className="text-gray-600 mb-4 italic">Recurring Revenue from Every Rental</p>
-
-                <div className="mb-6">
-                  <h4 className="font-semibold text-gray-900 mb-3">Services:</h4>
-                  <div className="grid md:grid-cols-2 gap-3">
-                    <div className="flex items-center text-gray-700">
-                      <span className="text-blue-star-500 mr-2">•</span> Blue Star-owned rentals
-                    </div>
-                    <div className="flex items-center text-gray-700">
-                      <span className="text-blue-star-500 mr-2">•</span> External landlord properties
-                    </div>
-                    <div className="flex items-center text-gray-700">
-                      <span className="text-blue-star-500 mr-2">•</span> Tenant placement
-                    </div>
-                    <div className="flex items-center text-gray-700">
-                      <span className="text-blue-star-500 mr-2">•</span> Maintenance coordination
-                    </div>
-                    <div className="flex items-center text-gray-700">
-                      <span className="text-blue-star-500 mr-2">•</span> Rent collection
-                    </div>
-                    <div className="flex items-center text-gray-700">
-                      <span className="text-blue-star-500 mr-2">•</span> Owner reporting
-                    </div>
-                  </div>
-                </div>
-
-                <div className="bg-blue-star-50 p-6 rounded-lg">
-                  <h4 className="font-semibold text-gray-900 mb-3">Strategic Benefits:</h4>
-                  <div className="grid md:grid-cols-2 gap-3 text-sm">
-                    <div>✓ Every rental = recurring revenue</div>
-                    <div>✓ Control expenses and quality</div>
-                    <div>✓ Landlord client retention</div>
-                    <div>✓ Perfect fit with BSHI policies</div>
-                    <div>✓ Passive profitability</div>
-                    <div>✓ Minimal staffing requirements</div>
-                  </div>
-                </div>
+              <div className="space-y-3">
+                <a
+                  href="#"
+                  className="w-full text-blue-star-400 hover:text-blue-star-300 font-semibold flex items-center justify-center group-hover:translate-x-1 transition-transform"
+                >
+                  View Services
+                  <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </a>
+                <a
+                  href="#"
+                  className="w-full text-gray-400 hover:text-white font-semibold flex items-center justify-center group-hover:translate-x-1 transition-transform"
+                >
+                  Visit Website
+                  <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </a>
               </div>
             </div>
-          </div>
 
-          {/* Division 5 - Pension Trust */}
-          <div className="bg-gradient-to-br from-blue-star-600 to-blue-star-800 text-white rounded-2xl shadow-xl p-8 hover:shadow-2xl transition">
-            <div className="flex items-start">
-              <div className="bg-white rounded-full w-12 h-12 flex items-center justify-center flex-shrink-0 mr-6">
-                <span className="text-2xl font-bold text-blue-star-700">5</span>
+            {/* Division 5 - Pension Trust */}
+            <div className="bg-gradient-to-br from-blue-star-600 to-blue-star-800 border border-blue-star-500 rounded-2xl p-8 hover:shadow-xl hover:shadow-blue-star-500/30 transition-all duration-300 group">
+              <div className="mb-6">
+                <svg className="w-12 h-12 text-white mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                </svg>
+                <h3 className="text-2xl font-bold text-white mb-3">Blue Star Pension Trust</h3>
+                <p className="text-white text-opacity-90 leading-relaxed mb-6">
+                  Generational wealth engine launching Years 5-7. Owns life insurance, accumulates cash value, holds real estate entities, and receives profit distributions. Provides legal asset protection, tax-advantaged growth, and ensures 50-year family wealth legacy.
+                </p>
               </div>
-              <div className="flex-1">
-                <h3 className="text-2xl font-bold mb-3">Blue Star Pension Trust</h3>
-                <p className="text-blue-star-100 mb-4 italic">Generational Wealth Engine (Launch: Years 5-7)</p>
-
-                <div className="mb-6">
-                  <h4 className="font-semibold mb-3">The Trust Structure:</h4>
-                  <div className="grid md:grid-cols-2 gap-3">
-                    <div className="flex items-center">
-                      <span className="text-blue-star-300 mr-2">•</span> Owns life insurance
-                    </div>
-                    <div className="flex items-center">
-                      <span className="text-blue-star-300 mr-2">•</span> Accumulates cash value
-                    </div>
-                    <div className="flex items-center">
-                      <span className="text-blue-star-300 mr-2">•</span> Owns real estate entities
-                    </div>
-                    <div className="flex items-center">
-                      <span className="text-blue-star-300 mr-2">•</span> Receives profit distributions
-                    </div>
-                    <div className="flex items-center">
-                      <span className="text-blue-star-300 mr-2">•</span> Legal asset protection
-                    </div>
-                    <div className="flex items-center">
-                      <span className="text-blue-star-300 mr-2">•</span> Generational wealth transfer
-                    </div>
-                    <div className="flex items-center">
-                      <span className="text-blue-star-300 mr-2">•</span> Tax-advantaged growth
-                    </div>
-                  </div>
-                </div>
-
-                <div className="bg-white bg-opacity-10 p-6 rounded-lg backdrop-blur">
-                  <p className="text-xl font-bold mb-2">This ensures Blue Star isn't just a business—</p>
-                  <p className="text-2xl font-bold">It's a 50-year family wealth machine.</p>
-                </div>
+              <div className="space-y-3">
+                <a
+                  href="#"
+                  className="w-full text-white hover:text-blue-star-100 font-semibold flex items-center justify-center group-hover:translate-x-1 transition-transform"
+                >
+                  Learn About Trust Structure
+                  <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </a>
+                <a
+                  href="#"
+                  className="w-full text-white text-opacity-70 hover:text-white font-semibold flex items-center justify-center group-hover:translate-x-1 transition-transform"
+                >
+                  Visit Website
+                  <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </a>
               </div>
             </div>
           </div>
