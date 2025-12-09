@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 
 function App() {
   const [showBSHIModal, setShowBSHIModal] = useState(false);
+  const [showFinCoModal, setShowFinCoModal] = useState(false);
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-white to-gray-50">
@@ -195,15 +196,15 @@ function App() {
                 </p>
               </div>
               <div className="space-y-3">
-                <a
-                  href="#"
+                <button
+                  onClick={() => setShowFinCoModal(true)}
                   className="w-full text-blue-star-400 hover:text-blue-star-300 font-semibold flex items-center justify-center group-hover:translate-x-1 transition-transform"
                 >
-                  Learn About Lending
+                  Read Full Business Plan
                   <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                   </svg>
-                </a>
+                </button>
                 <a
                   href="#"
                   className="w-full text-gray-400 hover:text-white font-semibold flex items-center justify-center group-hover:translate-x-1 transition-transform"
@@ -899,6 +900,380 @@ function App() {
               <div className="text-center pt-4">
                 <button
                   onClick={() => setShowBSHIModal(false)}
+                  className="bg-gray-200 text-gray-700 px-8 py-3 rounded-lg font-semibold hover:bg-gray-300 transition"
+                >
+                  Close
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* FinCo Business Plan Modal */}
+      {showFinCoModal && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4" onClick={() => setShowFinCoModal(false)}>
+          <div className="bg-white rounded-2xl max-w-5xl max-h-[90vh] overflow-y-auto shadow-2xl" onClick={(e) => e.stopPropagation()}>
+            <div className="sticky top-0 bg-gradient-to-r from-blue-star-700 to-blue-star-900 text-white p-6 rounded-t-2xl flex justify-between items-start">
+              <div>
+                <h2 className="text-3xl font-bold mb-2">Blue Star FinCo</h2>
+                <p className="text-blue-star-100">Private Lending • Asset Financing • Real Estate Funding Solutions</p>
+              </div>
+              <button
+                onClick={() => setShowFinCoModal(false)}
+                className="text-white hover:text-gray-200 text-3xl font-bold ml-4"
+              >
+                ×
+              </button>
+            </div>
+
+            <div className="p-8 space-y-8">
+              {/* Introduction */}
+              <div className="prose max-w-none">
+                <p className="text-lg text-gray-700 leading-relaxed">
+                  Blue Star FinCo is the financial engine of Blue Star Equity Group — a private lending and asset-financing company built to support real estate investors, entrepreneurs, developers, and eventually BSEG's own portfolio of properties and operating companies.
+                </p>
+                <p className="text-gray-700 leading-relaxed">
+                  FinCo empowers clients to move quickly, fund opportunities that banks move too slowly on, and access flexible capital with transparent terms, structured risk management, and a relationship-driven model.
+                </p>
+                <p className="text-xl font-bold text-blue-star-700 mt-6">
+                  Our mission is simple: provide smart, fast, secure financing for the projects that build communities and generate long-term wealth.
+                </p>
+              </div>
+
+              {/* Company Profile */}
+              <div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-6 flex items-center">
+                  <span className="text-blue-star-600 mr-2">⭐</span>
+                  Company Profile
+                </h3>
+
+                <div className="space-y-6">
+                  {/* Who We Serve */}
+                  <div className="bg-blue-star-50 p-6 rounded-xl">
+                    <h4 className="text-xl font-bold text-gray-900 mb-3">Who We Serve</h4>
+                    <p className="text-gray-700 mb-3">Blue Star FinCo provides capital for:</p>
+                    <ul className="space-y-2 text-gray-700">
+                      <li>• Real estate investors (flips, BRRRR, rentals)</li>
+                      <li>• Developers (small to midsize projects)</li>
+                      <li>• Land acquisition & improvement</li>
+                      <li>• Private lenders seeking capital stacking</li>
+                      <li>• Entrepreneurs needing small business asset financing</li>
+                      <li>• Future BSEG subsidiaries (equipment, vehicles, facilities)</li>
+                    </ul>
+                  </div>
+
+                  {/* What We Offer */}
+                  <div className="bg-gray-50 p-6 rounded-xl">
+                    <h4 className="text-xl font-bold text-gray-900 mb-3">What We Offer</h4>
+                    <p className="text-gray-700 mb-3">We issue multiple types of financing:</p>
+                    <div className="grid md:grid-cols-2 gap-3 text-gray-700">
+                      <div>• Short-Term Real Estate Loans (6–12 months)</div>
+                      <div>• Bridge Loans</div>
+                      <div>• Fix & Flip Loans</div>
+                      <div>• Rental Property DSCR Loans (3–30 years)</div>
+                      <div>• Refinance or Cash-Out Loans</div>
+                      <div>• Equipment Loans (future)</div>
+                    </div>
+                  </div>
+
+                  {/* Typical Loan Terms */}
+                  <div className="bg-blue-star-600 text-white p-6 rounded-xl">
+                    <h4 className="text-xl font-bold mb-3">Typical Loan Terms</h4>
+                    <div className="grid md:grid-cols-2 gap-4">
+                      <div>
+                        <p className="font-semibold mb-1">Loan-to-Value (LTV):</p>
+                        <p className="text-blue-star-100">65–80%</p>
+                      </div>
+                      <div>
+                        <p className="font-semibold mb-1">Interest Rates:</p>
+                        <p className="text-blue-star-100">10%–15% (industry standard)</p>
+                      </div>
+                      <div>
+                        <p className="font-semibold mb-1">Origination Fees:</p>
+                        <p className="text-blue-star-100">1–3 points</p>
+                      </div>
+                      <div>
+                        <p className="font-semibold mb-1">Decision Timeline:</p>
+                        <p className="text-blue-star-100">24–48 hours</p>
+                      </div>
+                    </div>
+                    <p className="mt-4 text-sm text-blue-star-100 italic">
+                      Appraisal not always required. These rates and structures are fully aligned with private lending norms and build strong recurring revenue for the holding company.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Strategic Role */}
+              <div className="bg-gradient-to-br from-green-50 to-emerald-50 p-6 rounded-xl border-2 border-green-200">
+                <h3 className="text-2xl font-bold text-gray-900 mb-4 flex items-center">
+                  <span className="text-green-600 mr-2">⭐</span>
+                  Strategic Role in the BSEG Ecosystem
+                </h3>
+                <p className="text-gray-700 mb-4">FinCo eventually becomes the capital backbone of Blue Star by:</p>
+                <div className="space-y-2 text-gray-700">
+                  <div className="flex items-start">
+                    <span className="text-green-600 mr-2 font-bold">✓</span>
+                    <span>Providing funding for property acquisitions for Property Holdings</span>
+                  </div>
+                  <div className="flex items-start">
+                    <span className="text-green-600 mr-2 font-bold">✓</span>
+                    <span>Financing improvements, rehabs, and new construction</span>
+                  </div>
+                  <div className="flex items-start">
+                    <span className="text-green-600 mr-2 font-bold">✓</span>
+                    <span>Funding equipment for future service companies</span>
+                  </div>
+                  <div className="flex items-start">
+                    <span className="text-green-600 mr-2 font-bold">✓</span>
+                    <span>Helping BSHI generate bundled clients (insurance + lending)</span>
+                  </div>
+                  <div className="flex items-start">
+                    <span className="text-green-600 mr-2 font-bold">✓</span>
+                    <span>Creating long-term, compounding recurring revenue</span>
+                  </div>
+                </div>
+                <p className="mt-4 font-semibold text-gray-800">
+                  Even before BSEG grows into a multi-company portfolio, FinCo stands alone as a highly profitable lending enterprise.
+                </p>
+              </div>
+
+              {/* Compliance & Structure */}
+              <div className="bg-gray-100 p-6 rounded-xl">
+                <h3 className="text-2xl font-bold text-gray-900 mb-4 flex items-center">
+                  <span className="text-blue-star-600 mr-2">⭐</span>
+                  Compliance & Structure
+                </h3>
+                <p className="text-gray-700 mb-4">
+                  Blue Star FinCo operates as a <strong>private lending company, not a bank</strong>. This keeps compliance simpler and focuses on:
+                </p>
+                <div className="grid md:grid-cols-2 gap-3 text-gray-700">
+                  <div>• Secured real estate-backed loans</div>
+                  <div>• Clear underwriting guidelines</div>
+                  <div>• Proper loan documentation</div>
+                  <div>• State-compliant lending limits</div>
+                  <div>• Strategic risk control</div>
+                </div>
+                <p className="mt-4 text-sm text-gray-600 italic">
+                  FinCo will consult legal counsel early to finalize lending parameters and lending licenses (as required by Texas and any future states).
+                </p>
+              </div>
+
+              {/* 5-7 Year Strategic Plan */}
+              <div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-6 flex items-center">
+                  <span className="text-blue-star-600 mr-2">⭐</span>
+                  5–7 Year Strategic Plan
+                </h3>
+                <p className="text-gray-600 mb-6 italic">
+                  This roadmap is built for realistic capital, risk control, and scalability.
+                </p>
+
+                <div className="space-y-6">
+                  {/* Phase 1 */}
+                  <div className="border-l-4 border-yellow-500 pl-6 bg-yellow-50 p-6 rounded-r-xl">
+                    <div className="flex items-center mb-3">
+                      <span className="bg-yellow-600 text-white px-3 py-1 rounded-full text-sm font-bold mr-3">Phase 1</span>
+                      <h4 className="text-xl font-bold text-gray-900">Years 1–2: Foundation & Capital Formation</h4>
+                    </div>
+                    <p className="text-gray-700 mb-4 font-semibold">(Before Lending Begins)</p>
+                    <p className="text-gray-700 mb-4">
+                      Because FinCo won't be funded at inception, the first stage focuses on:
+                    </p>
+                    <ul className="space-y-2 text-gray-700">
+                      <li>• Building business credit for BSEG</li>
+                      <li>• Establishing banking relationships</li>
+                      <li>• Creating lending guidelines, underwriting criteria, and loan docs</li>
+                      <li>• Learning the private lending industry in depth</li>
+                      <li>• Supported revenue via BSHI while capital accumulates</li>
+                      <li>• Saving cash for FinCo capitalization</li>
+                    </ul>
+                    <div className="mt-4 bg-white p-4 rounded-lg border-2 border-yellow-300">
+                      <p className="font-bold text-gray-900">Target:</p>
+                      <p className="text-gray-700">Raise $150K–$300K initial lending pool by end of Year 2</p>
+                      <p className="text-sm text-gray-600 mt-2 italic">
+                        During this period, FinCo builds its brand, processes, and technology but does not lend yet.
+                      </p>
+                    </div>
+                    <div className="mt-4 bg-blue-star-100 p-4 rounded-lg">
+                      <p className="font-bold text-blue-star-900">Primary Goal:</p>
+                      <p className="text-blue-star-800">Prepare for safe, scalable lending operations starting in Year 3.</p>
+                    </div>
+                  </div>
+
+                  {/* Phase 2 */}
+                  <div className="border-l-4 border-blue-star-600 pl-6 bg-blue-star-50 p-6 rounded-r-xl">
+                    <div className="flex items-center mb-3">
+                      <span className="bg-blue-star-700 text-white px-3 py-1 rounded-full text-sm font-bold mr-3">Phase 2</span>
+                      <h4 className="text-xl font-bold text-gray-900">Years 3–5: Launch Lending Operations</h4>
+                    </div>
+                    <p className="text-gray-700 mb-4 font-semibold">After establishing capital:</p>
+
+                    <div className="mb-4">
+                      <p className="font-semibold text-gray-900 mb-2">Year 3 Launch Goals:</p>
+                      <ul className="space-y-2 text-gray-700">
+                        <li>• Begin lending with $150K–$300K initial pool</li>
+                        <li>• Focus on low-risk, short-term real estate loans</li>
+                        <li>• Prioritize experienced investors and repeat borrowers</li>
+                        <li>• Offer bundled insurance through BSHI to protect collateral</li>
+                        <li>• Build reputation as a reliable private lender in DFW & Texas</li>
+                      </ul>
+                    </div>
+
+                    <div className="bg-white p-4 rounded-lg mb-4">
+                      <p className="font-bold text-gray-900 mb-3">Expected Performance (Years 3–5):</p>
+                      <div className="grid md:grid-cols-2 gap-3 text-gray-700 text-sm">
+                        <div>• Average loan size: $50K–$150K</div>
+                        <div>• Annual loan turnover: 2–4 times/year</div>
+                        <div>• Monthly interest = recurring cash flow</div>
+                        <div>• Points generate immediate revenue</div>
+                      </div>
+                    </div>
+
+                    <div className="bg-gray-900 text-white p-4 rounded-lg">
+                      <p className="font-bold mb-3">Example Year 4 Financial Snapshot:</p>
+                      <div className="space-y-2 text-sm">
+                        <div className="flex justify-between">
+                          <span>Loan Portfolio:</span>
+                          <span className="font-semibold">$500K–$1M</span>
+                        </div>
+                        <div className="flex justify-between">
+                          <span>Average Annual Yield:</span>
+                          <span className="font-semibold">12–14%</span>
+                        </div>
+                        <div className="flex justify-between">
+                          <span>Origination Fees (2-3 pts):</span>
+                          <span className="font-semibold">$20K–$40K/yr</span>
+                        </div>
+                        <div className="flex justify-between border-t border-white border-opacity-20 pt-2">
+                          <span>Revenue:</span>
+                          <span className="font-bold text-green-300">$80K–$150K+</span>
+                        </div>
+                        <div className="flex justify-between">
+                          <span>Profit Margin:</span>
+                          <span className="font-bold text-green-300">60%–80%</span>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="mt-4 bg-blue-star-100 p-4 rounded-lg">
+                      <p className="font-bold text-blue-star-900">Primary Goal:</p>
+                      <p className="text-blue-star-800">Establish FinCo as a trusted regional lender with strong recurring revenue.</p>
+                    </div>
+                  </div>
+
+                  {/* Phase 3 */}
+                  <div className="border-l-4 border-green-600 pl-6 bg-gradient-to-br from-green-600 to-emerald-700 text-white p-6 rounded-r-xl">
+                    <div className="flex items-center mb-3">
+                      <span className="bg-white text-green-700 px-3 py-1 rounded-full text-sm font-bold mr-3">Phase 3</span>
+                      <h4 className="text-xl font-bold">Years 5–7: Scale Into Multi-Million Dollar Platform</h4>
+                    </div>
+                    <p className="mb-4">As retained earnings compound and reputation grows:</p>
+                    <ul className="space-y-2 mb-4">
+                      <li>• Expand loan offerings: DSCR, BRRRR funding, new construction</li>
+                      <li>• Build brokerage partnerships with realtors, GCs, lenders, investors</li>
+                      <li>• Add additional capital sources (private investors + capital stack)</li>
+                      <li>• Begin lending to developers on structured terms</li>
+                      <li>• Acquire or finance income-producing properties for BSEG</li>
+                      <li>• Integrate FinCo with Property Holdings for turnkey development</li>
+                      <li>• Begin offering equipment loans when BSEG launches service companies</li>
+                    </ul>
+
+                    <div className="bg-white bg-opacity-10 backdrop-blur p-4 rounded-lg">
+                      <p className="font-bold mb-3">Expected Loan Portfolio Size by Year 7:</p>
+                      <div className="space-y-2 text-sm">
+                        <div>→ $2M–$5M active portfolio</div>
+                        <div>→ 10%–14% yield + points</div>
+                        <div className="font-bold text-lg">→ Revenue: $300K–$700K+</div>
+                        <div>→ Profit Margin: 50%–70%</div>
+                      </div>
+                      <p className="mt-4 font-bold text-lg">
+                        FinCo becomes a high-margin cash engine, fueling both BSEG growth and generational wealth.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* 7-Year Financial Projection */}
+              <div className="bg-gray-900 text-white p-6 rounded-xl">
+                <h3 className="text-2xl font-bold mb-4 flex items-center">
+                  <span className="mr-2">⭐</span>
+                  7-Year Financial Projection
+                </h3>
+                <p className="text-gray-300 mb-6 italic">Industry Standard - Conservative Growth & Reinvestment</p>
+
+                <div className="overflow-x-auto">
+                  <table className="w-full text-sm">
+                    <thead>
+                      <tr className="border-b border-gray-700">
+                        <th className="text-left py-3 px-2">Year</th>
+                        <th className="text-left py-3 px-2">Loan Pool</th>
+                        <th className="text-left py-3 px-2">Avg Yield</th>
+                        <th className="text-left py-3 px-2">Annual Revenue</th>
+                        <th className="text-left py-3 px-2">Notes</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr className="border-b border-gray-800">
+                        <td className="py-3 px-2 font-semibold">1</td>
+                        <td className="py-3 px-2">$0</td>
+                        <td className="py-3 px-2">—</td>
+                        <td className="py-3 px-2">$0</td>
+                        <td className="py-3 px-2 text-gray-400">Planning & compliance only</td>
+                      </tr>
+                      <tr className="border-b border-gray-800">
+                        <td className="py-3 px-2 font-semibold">2</td>
+                        <td className="py-3 px-2">$0</td>
+                        <td className="py-3 px-2">—</td>
+                        <td className="py-3 px-2">$0</td>
+                        <td className="py-3 px-2 text-gray-400">Capital accumulation</td>
+                      </tr>
+                      <tr className="border-b border-gray-800 bg-white bg-opacity-5">
+                        <td className="py-3 px-2 font-semibold">3</td>
+                        <td className="py-3 px-2">$200K</td>
+                        <td className="py-3 px-2">12%</td>
+                        <td className="py-3 px-2 text-green-300 font-semibold">$24K–$35K</td>
+                        <td className="py-3 px-2 text-gray-400">First year lending</td>
+                      </tr>
+                      <tr className="border-b border-gray-800">
+                        <td className="py-3 px-2 font-semibold">4</td>
+                        <td className="py-3 px-2">$500K</td>
+                        <td className="py-3 px-2">12%</td>
+                        <td className="py-3 px-2 text-green-300 font-semibold">$70K–$100K</td>
+                        <td className="py-3 px-2 text-gray-400">Repeat borrowers fuel growth</td>
+                      </tr>
+                      <tr className="border-b border-gray-800 bg-white bg-opacity-5">
+                        <td className="py-3 px-2 font-semibold">5</td>
+                        <td className="py-3 px-2">$1M</td>
+                        <td className="py-3 px-2">12%</td>
+                        <td className="py-3 px-2 text-green-300 font-semibold">$140K–$180K</td>
+                        <td className="py-3 px-2 text-gray-400">Take on larger collateral</td>
+                      </tr>
+                      <tr className="border-b border-gray-800">
+                        <td className="py-3 px-2 font-semibold">6</td>
+                        <td className="py-3 px-2">$2M</td>
+                        <td className="py-3 px-2">12%</td>
+                        <td className="py-3 px-2 text-green-300 font-semibold">$300K–$450K</td>
+                        <td className="py-3 px-2 text-gray-400">More complex loan products</td>
+                      </tr>
+                      <tr className="bg-green-900 bg-opacity-30">
+                        <td className="py-3 px-2 font-bold">7</td>
+                        <td className="py-3 px-2 font-bold">$3M–$5M</td>
+                        <td className="py-3 px-2 font-bold">12%</td>
+                        <td className="py-3 px-2 font-bold text-green-300 text-lg">$450K–$700K+</td>
+                        <td className="py-3 px-2 font-semibold">Mature cash engine</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+
+              {/* Close Button */}
+              <div className="text-center pt-4">
+                <button
+                  onClick={() => setShowFinCoModal(false)}
                   className="bg-gray-200 text-gray-700 px-8 py-3 rounded-lg font-semibold hover:bg-gray-300 transition"
                 >
                   Close
