@@ -14,7 +14,7 @@ function App() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center">
-              <span className="text-2xl font-bold text-blue-star-700">⭐ Blue Star Equity Group</span>
+              <span className="text-2xl font-bold text-blue-star-700">⭐ Blue Star Equity Group Strategy & Vision</span>
             </div>
             <div className="hidden md:flex space-x-8">
               <a href="#about" className="text-gray-700 hover:text-blue-star-600 transition">About</a>
@@ -100,7 +100,7 @@ function App() {
                   <p className="text-gray-600">Strategy, Finance, Systems, Governance</p>
                 </div>
                 <div className="bg-white p-6 rounded-lg shadow-sm">
-                  <h4 className="font-bold text-xl text-blue-star-700 mb-2">Daron ______</h4>
+                  <h4 className="font-bold text-xl text-blue-star-700 mb-2">Daron Mcbee</h4>
                   <p className="text-gray-600">Sales, Partnerships, Insurance, Client Acquisition</p>
                 </div>
               </div>
@@ -2151,7 +2151,7 @@ function App() {
                   </div>
                   <div className="bg-blue-50 p-4 rounded-lg md:col-span-2">
                     <h4 className="font-bold text-blue-star-700 mb-2">Founders / Partners</h4>
-                    <p className="text-gray-700">Howard Reid & Daron Garland</p>
+                    <p className="text-gray-700">Howard Reid & Daron Mcbee</p>
                   </div>
                 </div>
                 <div className="bg-gradient-to-r from-blue-star-50 to-blue-100 border-l-4 border-blue-star-600 p-6">
