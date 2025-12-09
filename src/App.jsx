@@ -4,6 +4,7 @@ function App() {
   const [showBSHIModal, setShowBSHIModal] = useState(false);
   const [showFinCoModal, setShowFinCoModal] = useState(false);
   const [showPensionModal, setShowPensionModal] = useState(false);
+  const [showPropertyModal, setShowPropertyModal] = useState(false);
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-white to-gray-50">
@@ -164,15 +165,15 @@ function App() {
                 </p>
               </div>
               <div className="space-y-3">
-                <a
-                  href="#"
+                <button
+                  onClick={() => setShowPropertyModal(true)}
                   className="w-full text-blue-star-400 hover:text-blue-star-300 font-semibold flex items-center justify-center group-hover:translate-x-1 transition-transform"
                 >
-                  View Portfolio
+                  Read Full Business Plan
                   <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                   </svg>
-                </a>
+                </button>
                 <a
                   href="#"
                   className="w-full text-gray-400 hover:text-white font-semibold flex items-center justify-center group-hover:translate-x-1 transition-transform"
@@ -1657,6 +1658,451 @@ function App() {
               <div className="text-center pt-4">
                 <button
                   onClick={() => setShowPensionModal(false)}
+                  className="bg-gray-200 text-gray-700 px-8 py-3 rounded-lg font-semibold hover:bg-gray-300 transition"
+                >
+                  Close
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* Property Holdings Modal */}
+      {showPropertyModal && (
+        <div className="fixed inset-0 bg-black bg-opacity-75 z-50 flex items-center justify-center p-4">
+          <div className="bg-white rounded-2xl max-w-5xl w-full max-h-[90vh] overflow-hidden shadow-2xl">
+            <div className="bg-gradient-to-r from-gray-800 via-gray-700 to-gray-900 text-white p-8">
+              <h2 className="text-4xl font-bold mb-3">Blue Star Property Holdings</h2>
+              <p className="text-xl text-gray-300">Strategic Real Estate. Protected Assets. Passive Wealth.</p>
+            </div>
+
+            <div className="p-8 overflow-y-auto max-h-[calc(90vh-180px)]">
+              {/* Introduction */}
+              <div className="mb-8">
+                <p className="text-gray-700 leading-relaxed text-lg mb-4">
+                  Blue Star Property Holdings is the dedicated real-estate acquisition and management arm of the Blue Star ecosystem. Its purpose is to build a durable, diversified portfolio of income-producing assets that compound in value, generate stable cash flow, and provide long-term wealth security for the partners and their families.
+                </p>
+                <p className="text-gray-700 leading-relaxed text-lg mb-4">
+                  Where Blue Star Heritage Insurance generates recurring commissions and Blue Star FinCo produces high-yield lending income, Blue Star Property Holdings focuses on equity accumulation, appreciation, and passive income. Together, these divisions create the foundation of a multi-generational wealth engine.
+                </p>
+                <p className="text-gray-700 leading-relaxed text-lg mb-6">
+                  Blue Star Property Holdings operates with a disciplined, conservative strategy:
+                </p>
+                <div className="bg-blue-50 border-l-4 border-blue-star-600 p-6 mb-6">
+                  <ul className="space-y-2 text-gray-700">
+                    <li className="flex items-start">
+                      <span className="text-blue-star-600 font-bold mr-3">✔</span>
+                      <span>Acquire undervalued or distressed properties</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-blue-star-600 font-bold mr-3">✔</span>
+                      <span>Improve them through light renovations</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-blue-star-600 font-bold mr-3">✔</span>
+                      <span>Rent or resell for profit</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-blue-star-600 font-bold mr-3">✔</span>
+                      <span>Hold core assets long-term for equity growth</span>
+                    </li>
+                  </ul>
+                </div>
+                <p className="text-gray-700 leading-relaxed text-lg">
+                  Each property is placed in its own LLC for liability isolation and rolled up under the Property Holdings umbrella, providing clean tax structure, asset protection, and a professional acquisition framework.
+                </p>
+              </div>
+
+              {/* Company Profile */}
+              <div className="mb-8">
+                <h3 className="text-3xl font-bold text-gray-900 mb-6 flex items-center">
+                  <span className="text-yellow-500 mr-3">⭐</span>
+                  Company Profile
+                </h3>
+
+                <div className="mb-6">
+                  <h4 className="text-xl font-bold text-blue-star-700 mb-3">Core Mission</h4>
+                  <p className="text-gray-700 leading-relaxed">
+                    To acquire, improve, and manage a portfolio of real estate assets that produce stable, passive income and long-term equity, supporting the broader Blue Star financial ecosystem and providing generational security.
+                  </p>
+                </div>
+
+                <div className="mb-6">
+                  <h4 className="text-xl font-bold text-blue-star-700 mb-3">Primary Roles</h4>
+                  <p className="text-gray-700 leading-relaxed mb-3">Blue Star Property Holdings exists to:</p>
+                  <ul className="space-y-2 text-gray-700 ml-6">
+                    <li className="flex items-start">
+                      <span className="text-blue-star-600 mr-3">•</span>
+                      <span>Build a growing portfolio of rental and investment properties</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-blue-star-600 mr-3">•</span>
+                      <span>Create passive income for BSEG partners</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-blue-star-600 mr-3">•</span>
+                      <span>Serve as collateral and leverage for future acquisitions</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-blue-star-600 mr-3">•</span>
+                      <span>Provide real assets backing Blue Star FinCo lending operations</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-blue-star-600 mr-3">•</span>
+                      <span>Offer steady, predictable returns not tied to market volatility</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-blue-star-600 mr-3">•</span>
+                      <span>Utilize internal capital (Pension Trust + FinCo) for low-friction funding</span>
+                    </li>
+                  </ul>
+                </div>
+
+                <div className="mb-6">
+                  <h4 className="text-xl font-bold text-blue-star-700 mb-3">Types of Properties Targeted</h4>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                    <div className="flex items-start">
+                      <span className="text-blue-star-600 font-bold mr-3">✔</span>
+                      <span className="text-gray-700">Single-family rentals</span>
+                    </div>
+                    <div className="flex items-start">
+                      <span className="text-blue-star-600 font-bold mr-3">✔</span>
+                      <span className="text-gray-700">Duplexes / small multis (2–8 units)</span>
+                    </div>
+                    <div className="flex items-start">
+                      <span className="text-blue-star-600 font-bold mr-3">✔</span>
+                      <span className="text-gray-700">Small commercial properties (Phase 2 or 3)</span>
+                    </div>
+                    <div className="flex items-start">
+                      <span className="text-blue-star-600 font-bold mr-3">✔</span>
+                      <span className="text-gray-700">Distressed homes suitable for fix-and-flip</span>
+                    </div>
+                    <div className="flex items-start">
+                      <span className="text-blue-star-600 font-bold mr-3">✔</span>
+                      <span className="text-gray-700">Foreclosures or off-market deals</span>
+                    </div>
+                    <div className="flex items-start">
+                      <span className="text-blue-star-600 font-bold mr-3">✔</span>
+                      <span className="text-gray-700">Properties in rising or stable rental markets</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Strategic Advantage */}
+              <div className="mb-8">
+                <h3 className="text-3xl font-bold text-gray-900 mb-6 flex items-center">
+                  <span className="text-yellow-500 mr-3">⭐</span>
+                  Strategic Advantage in the Blue Star Ecosystem
+                </h3>
+
+                <div className="space-y-6">
+                  <div className="bg-green-50 border-l-4 border-green-600 p-6">
+                    <h4 className="text-lg font-bold text-green-800 mb-3">1. Internal Liquidity Through Pension Trust</h4>
+                    <p className="text-gray-700 mb-3">The Pension Trust provides tax-efficient capital that can be borrowed for:</p>
+                    <ul className="space-y-2 text-gray-700 ml-6">
+                      <li className="flex items-start">
+                        <span className="text-green-600 mr-3">•</span>
+                        <span>Down payments</span>
+                      </li>
+                      <li className="flex items-start">
+                        <span className="text-green-600 mr-3">•</span>
+                        <span>Renovations</span>
+                      </li>
+                      <li className="flex items-start">
+                        <span className="text-green-600 mr-3">•</span>
+                        <span>Emergency funding</span>
+                      </li>
+                      <li className="flex items-start">
+                        <span className="text-green-600 mr-3">•</span>
+                        <span>Short-term acquisition capital</span>
+                      </li>
+                    </ul>
+                    <p className="text-gray-700 mt-3 font-semibold">No credit checks. No bank underwriting. No delays.</p>
+                  </div>
+
+                  <div className="bg-blue-50 border-l-4 border-blue-600 p-6">
+                    <h4 className="text-lg font-bold text-blue-800 mb-3">2. Reinforcement From Blue Star FinCo</h4>
+                    <p className="text-gray-700 mb-3">FinCo eventually provides:</p>
+                    <ul className="space-y-2 text-gray-700 ml-6">
+                      <li className="flex items-start">
+                        <span className="text-blue-600 mr-3">•</span>
+                        <span>Rehab loans</span>
+                      </li>
+                      <li className="flex items-start">
+                        <span className="text-blue-600 mr-3">•</span>
+                        <span>Bridge loans</span>
+                      </li>
+                      <li className="flex items-start">
+                        <span className="text-blue-600 mr-3">•</span>
+                        <span>Hard money lending</span>
+                      </li>
+                      <li className="flex items-start">
+                        <span className="text-blue-600 mr-3">•</span>
+                        <span>High-yield returns backed by real assets</span>
+                      </li>
+                    </ul>
+                    <p className="text-gray-700 mt-3">Property Holdings benefits from FinCo's capital while also strengthening FinCo's loan book.</p>
+                  </div>
+
+                  <div className="bg-purple-50 border-l-4 border-purple-600 p-6">
+                    <h4 className="text-lg font-bold text-purple-800 mb-3">3. Insurance Link Through BSHI</h4>
+                    <p className="text-gray-700 mb-3">Every property must be insured — and BSHI captures:</p>
+                    <ul className="space-y-2 text-gray-700 ml-6">
+                      <li className="flex items-start">
+                        <span className="text-purple-600 mr-3">•</span>
+                        <span>Homeowners</span>
+                      </li>
+                      <li className="flex items-start">
+                        <span className="text-purple-600 mr-3">•</span>
+                        <span>Renters</span>
+                      </li>
+                      <li className="flex items-start">
+                        <span className="text-purple-600 mr-3">•</span>
+                        <span>Landlord policies</span>
+                      </li>
+                      <li className="flex items-start">
+                        <span className="text-purple-600 mr-3">•</span>
+                        <span>Property liability</span>
+                      </li>
+                      <li className="flex items-start">
+                        <span className="text-purple-600 mr-3">•</span>
+                        <span>Builders risk (for flips)</span>
+                      </li>
+                    </ul>
+                    <p className="text-gray-700 mt-3 font-semibold">This keeps wealth and cash flow inside the Blue Star ecosystem.</p>
+                  </div>
+
+                  <div className="bg-orange-50 border-l-4 border-orange-600 p-6">
+                    <h4 className="text-lg font-bold text-orange-800 mb-3">4. BSEG Management Oversight</h4>
+                    <p className="text-gray-700">The holding company receives a 10% management fee, providing operational funding and long-term business stability.</p>
+                  </div>
+                </div>
+              </div>
+
+              {/* 5-7 Year Business Plan */}
+              <div className="mb-8">
+                <h3 className="text-3xl font-bold text-gray-900 mb-6 flex items-center">
+                  <span className="text-yellow-500 mr-3">⭐</span>
+                  5–7 Year Business Plan
+                </h3>
+
+                {/* Phase 1 */}
+                <div className="mb-6 border-l-4 border-yellow-500 bg-yellow-50 p-6">
+                  <div className="flex items-center mb-4">
+                    <span className="bg-yellow-500 text-white px-4 py-2 rounded-full font-bold text-sm mr-4">PHASE 1</span>
+                    <h4 className="text-2xl font-bold text-gray-900">Years 1–2: Foundation & First Acquisitions</h4>
+                  </div>
+                  <ul className="space-y-2 text-gray-700 mb-4">
+                    <li className="flex items-start">
+                      <span className="text-yellow-600 mr-3">•</span>
+                      <span>Form Property Holdings LLC + create template structure for subsidiary LLCs</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-yellow-600 mr-3">•</span>
+                      <span>Acquire 1–2 small residential rentals</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-yellow-600 mr-3">•</span>
+                      <span>Target: $120K–$200K properties needing minor updates</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-yellow-600 mr-3">•</span>
+                      <span>Establish property management workflows</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-yellow-600 mr-3">•</span>
+                      <span>Build banking and accounting structure</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-yellow-600 mr-3">•</span>
+                      <span>Begin producing first passive income streams</span>
+                    </li>
+                  </ul>
+                  <div className="bg-white p-4 rounded-lg">
+                    <h5 className="font-bold text-gray-900 mb-2">Year 1–2 Targets:</h5>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-3 text-sm text-gray-700">
+                      <div>• Portfolio Value: $200K–$350K</div>
+                      <div>• Monthly Net Cash Flow: $300–$700</div>
+                      <div className="md:col-span-2">• Renovation ROI: 10–15%</div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Phase 2 */}
+                <div className="mb-6 border-l-4 border-blue-500 bg-blue-50 p-6">
+                  <div className="flex items-center mb-4">
+                    <span className="bg-blue-500 text-white px-4 py-2 rounded-full font-bold text-sm mr-4">PHASE 2</span>
+                    <h4 className="text-2xl font-bold text-gray-900">Years 3–5: Scaling the Portfolio & Introducing Flips</h4>
+                  </div>
+                  <ul className="space-y-2 text-gray-700 mb-4">
+                    <li className="flex items-start">
+                      <span className="text-blue-600 mr-3">•</span>
+                      <span>Acquire 2–4 properties per year</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-blue-600 mr-3">•</span>
+                      <span>Introduce flip properties if capital allows</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-blue-600 mr-3">•</span>
+                      <span>Begin using Pension Trust loans for acquisitions</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-blue-600 mr-3">•</span>
+                      <span>Introduce small multi-family opportunities (duplex / fourplex)</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-blue-600 mr-3">•</span>
+                      <span>Outsource maintenance where needed</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-blue-600 mr-3">•</span>
+                      <span>Build relationships with wholesalers, agents, and contractors</span>
+                    </li>
+                  </ul>
+                  <div className="bg-white p-4 rounded-lg">
+                    <h5 className="font-bold text-gray-900 mb-2">Year 3–5 Targets:</h5>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-3 text-sm text-gray-700">
+                      <div>• Portfolio Value: $750K–$1.5M</div>
+                      <div>• Monthly Net Cash Flow: $1,500–$3,000</div>
+                      <div>• Annual Flip Profit: $25K–$60K (optional)</div>
+                      <div>• Equity Growth from Appreciation: 2–4% per year</div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Phase 3 */}
+                <div className="mb-6 border-l-4 border-green-500 bg-green-50 p-6">
+                  <div className="flex items-center mb-4">
+                    <span className="bg-green-500 text-white px-4 py-2 rounded-full font-bold text-sm mr-4">PHASE 3</span>
+                    <h4 className="text-2xl font-bold text-gray-900">Years 5–7: Maturity, Leverage, and Multi-Unit Expansion</h4>
+                  </div>
+                  <ul className="space-y-2 text-gray-700 mb-4">
+                    <li className="flex items-start">
+                      <span className="text-green-600 mr-3">•</span>
+                      <span>Add 2–3 larger assets (fourplex or commercial office condo)</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-green-600 mr-3">•</span>
+                      <span>Leverage existing equity to fund new acquisitions</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-green-600 mr-3">•</span>
+                      <span>Introduce internal financing via FinCo</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-green-600 mr-3">•</span>
+                      <span>Strategic refinances to increase liquidity</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-green-600 mr-3">•</span>
+                      <span>Build property management systems for long-term sustainability</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-green-600 mr-3">•</span>
+                      <span>Evaluate selling select assets to upgrade to higher-performing ones</span>
+                    </li>
+                  </ul>
+                  <div className="bg-white p-4 rounded-lg">
+                    <h5 className="font-bold text-gray-900 mb-2">Year 5–7 Targets:</h5>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-3 text-sm text-gray-700">
+                      <div>• Portfolio Value: $2M–$3.5M</div>
+                      <div>• Monthly Net Cash Flow: $3,000–$6,000</div>
+                      <div>• Total Equity Position: $600K–$1M</div>
+                      <div>• Internal Loan Use: $200K–$400K</div>
+                      <div className="md:col-span-2">• Properties Owned: 7–12 assets</div>
+                    </div>
+                  </div>
+                  <p className="text-gray-700 mt-4 font-semibold italic">
+                    By Year 7, this becomes a self-sustaining wealth engine capable of funding itself.
+                  </p>
+                </div>
+              </div>
+
+              {/* Financial Projection */}
+              <div className="mb-8">
+                <h3 className="text-3xl font-bold text-gray-900 mb-6 flex items-center">
+                  <span className="text-yellow-500 mr-3">⭐</span>
+                  Financial Projection (7-Year Snapshot)
+                </h3>
+                <p className="text-gray-700 mb-4">
+                  These projections reflect common new-investor performance in Texas and Midwest markets, adjusted conservatively:
+                </p>
+                <div className="overflow-x-auto">
+                  <table className="w-full border-collapse bg-white shadow-lg rounded-lg overflow-hidden">
+                    <thead>
+                      <tr className="bg-gradient-to-r from-blue-star-700 to-blue-star-900 text-white">
+                        <th className="px-6 py-4 text-left font-bold">Year</th>
+                        <th className="px-6 py-4 text-left font-bold">Properties Owned</th>
+                        <th className="px-6 py-4 text-left font-bold">Annual Cash Flow</th>
+                        <th className="px-6 py-4 text-left font-bold">Equity Growth</th>
+                        <th className="px-6 py-4 text-left font-bold">Portfolio Value</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr className="border-b hover:bg-gray-50">
+                        <td className="px-6 py-4 font-semibold">1</td>
+                        <td className="px-6 py-4">1</td>
+                        <td className="px-6 py-4">$2K–$4K</td>
+                        <td className="px-6 py-4">$5K–$10K</td>
+                        <td className="px-6 py-4 font-semibold">$150K–$200K</td>
+                      </tr>
+                      <tr className="border-b hover:bg-gray-50 bg-gray-50">
+                        <td className="px-6 py-4 font-semibold">2</td>
+                        <td className="px-6 py-4">2</td>
+                        <td className="px-6 py-4">$4K–$7K</td>
+                        <td className="px-6 py-4">$10K–$20K</td>
+                        <td className="px-6 py-4 font-semibold">$250K–$350K</td>
+                      </tr>
+                      <tr className="border-b hover:bg-gray-50">
+                        <td className="px-6 py-4 font-semibold">3</td>
+                        <td className="px-6 py-4">3–4</td>
+                        <td className="px-6 py-4">$8K–$12K</td>
+                        <td className="px-6 py-4">$20K–$35K</td>
+                        <td className="px-6 py-4 font-semibold">$450K–$700K</td>
+                      </tr>
+                      <tr className="border-b hover:bg-gray-50 bg-gray-50">
+                        <td className="px-6 py-4 font-semibold">4</td>
+                        <td className="px-6 py-4">4–6</td>
+                        <td className="px-6 py-4">$12K–$18K</td>
+                        <td className="px-6 py-4">$35K–$60K</td>
+                        <td className="px-6 py-4 font-semibold">$700K–$1.1M</td>
+                      </tr>
+                      <tr className="border-b hover:bg-gray-50">
+                        <td className="px-6 py-4 font-semibold">5</td>
+                        <td className="px-6 py-4">6–8</td>
+                        <td className="px-6 py-4">$18K–$28K</td>
+                        <td className="px-6 py-4">$60K–$100K</td>
+                        <td className="px-6 py-4 font-semibold">$1.1M–$1.5M</td>
+                      </tr>
+                      <tr className="border-b hover:bg-gray-50 bg-gray-50">
+                        <td className="px-6 py-4 font-semibold">6</td>
+                        <td className="px-6 py-4">8–10</td>
+                        <td className="px-6 py-4">$25K–$40K</td>
+                        <td className="px-6 py-4">$100K–$150K</td>
+                        <td className="px-6 py-4 font-semibold">$1.5M–$2.5M</td>
+                      </tr>
+                      <tr className="hover:bg-gray-50">
+                        <td className="px-6 py-4 font-semibold">7</td>
+                        <td className="px-6 py-4">10–12</td>
+                        <td className="px-6 py-4">$35K–$60K</td>
+                        <td className="px-6 py-4">$150K–$250K</td>
+                        <td className="px-6 py-4 font-semibold text-blue-star-700">$2M–$3.5M</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <p className="text-gray-700 mt-4 italic">
+                  Even modest growth leads to multi-million-dollar asset holdings in under a decade.
+                </p>
+              </div>
+
+              {/* Close Button */}
+              <div className="flex justify-center pt-6 border-t">
+                <button
+                  onClick={() => setShowPropertyModal(false)}
                   className="bg-gray-200 text-gray-700 px-8 py-3 rounded-lg font-semibold hover:bg-gray-300 transition"
                 >
                   Close
