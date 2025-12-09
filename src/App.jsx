@@ -5,6 +5,7 @@ function App() {
   const [showFinCoModal, setShowFinCoModal] = useState(false);
   const [showPensionModal, setShowPensionModal] = useState(false);
   const [showPropertyModal, setShowPropertyModal] = useState(false);
+  const [showPropertyMgmtModal, setShowPropertyMgmtModal] = useState(false);
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-white to-gray-50">
@@ -231,15 +232,15 @@ function App() {
                 </p>
               </div>
               <div className="space-y-3">
-                <a
-                  href="#"
+                <button
+                  onClick={() => setShowPropertyMgmtModal(true)}
                   className="w-full text-blue-star-400 hover:text-blue-star-300 font-semibold flex items-center justify-center group-hover:translate-x-1 transition-transform"
                 >
-                  View Services
+                  Read Full Business Plan
                   <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                   </svg>
-                </a>
+                </button>
                 <a
                   href="#"
                   className="w-full text-gray-400 hover:text-white font-semibold flex items-center justify-center group-hover:translate-x-1 transition-transform"
@@ -2103,6 +2104,752 @@ function App() {
               <div className="flex justify-center pt-6 border-t">
                 <button
                   onClick={() => setShowPropertyModal(false)}
+                  className="bg-gray-200 text-gray-700 px-8 py-3 rounded-lg font-semibold hover:bg-gray-300 transition"
+                >
+                  Close
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* Property Management Modal */}
+      {showPropertyMgmtModal && (
+        <div className="fixed inset-0 bg-black bg-opacity-75 z-50 flex items-center justify-center p-4">
+          <div className="bg-white rounded-2xl max-w-5xl w-full max-h-[90vh] overflow-hidden shadow-2xl">
+            <div className="bg-gradient-to-r from-blue-star-800 via-blue-star-700 to-blue-star-900 text-white p-8">
+              <h2 className="text-4xl font-bold mb-3">Blue Star Property Management</h2>
+              <p className="text-xl text-gray-200">Company Profile, Strategic Plan, and 7-Year Growth Model</p>
+              <p className="text-sm text-gray-300 mt-2">A subsidiary of Blue Star Equity Group (BSEG)</p>
+            </div>
+
+            <div className="p-8 overflow-y-auto max-h-[calc(90vh-180px)]">
+              {/* Company Identity */}
+              <div className="mb-8">
+                <h3 className="text-3xl font-bold text-gray-900 mb-6">1. Company Identity</h3>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+                  <div className="bg-blue-50 p-4 rounded-lg">
+                    <h4 className="font-bold text-blue-star-700 mb-2">Name</h4>
+                    <p className="text-gray-700">Blue Star Property Management (BSPM)</p>
+                  </div>
+                  <div className="bg-blue-50 p-4 rounded-lg">
+                    <h4 className="font-bold text-blue-star-700 mb-2">Parent Company</h4>
+                    <p className="text-gray-700">Blue Star Equity Group</p>
+                  </div>
+                  <div className="bg-blue-50 p-4 rounded-lg">
+                    <h4 className="font-bold text-blue-star-700 mb-2">Focus</h4>
+                    <p className="text-gray-700">Multifamily, apartment complexes, and commercial property management</p>
+                  </div>
+                  <div className="bg-blue-50 p-4 rounded-lg">
+                    <h4 className="font-bold text-blue-star-700 mb-2">Service Area</h4>
+                    <p className="text-gray-700">Texas + regional expansion markets</p>
+                  </div>
+                  <div className="bg-blue-50 p-4 rounded-lg md:col-span-2">
+                    <h4 className="font-bold text-blue-star-700 mb-2">Founders / Partners</h4>
+                    <p className="text-gray-700">Howard Reid & Daron Garland</p>
+                  </div>
+                </div>
+                <div className="bg-gradient-to-r from-blue-star-50 to-blue-100 border-l-4 border-blue-star-600 p-6">
+                  <h4 className="font-bold text-blue-star-800 mb-3">Purpose</h4>
+                  <p className="text-gray-700 leading-relaxed">
+                    BSPM exists to provide high-performance asset management for multifamily, apartment, and commercial real estate investments. We combine the discipline of a private-equity operation with the attentiveness of a boutique management company.
+                  </p>
+                </div>
+              </div>
+
+              {/* Company Mission */}
+              <div className="mb-8">
+                <h3 className="text-3xl font-bold text-gray-900 mb-6">2. Company Mission</h3>
+                <div className="bg-green-50 border-l-4 border-green-600 p-6">
+                  <p className="text-gray-700 leading-relaxed text-lg">
+                    To deliver institutional-grade management for multifamily and commercial properties while protecting investor capital, maximizing NOI, improving tenant experience, and driving long-term asset appreciation.
+                  </p>
+                </div>
+              </div>
+
+              {/* Company Vision */}
+              <div className="mb-8">
+                <h3 className="text-3xl font-bold text-gray-900 mb-6">3. Company Vision</h3>
+                <div className="bg-purple-50 border-l-4 border-purple-600 p-6">
+                  <p className="text-gray-700 leading-relaxed text-lg">
+                    To become a leading regional provider of multifamily and commercial property management—known for operational excellence, transparent reporting, government-compliant processes, and unmatched investor returns.
+                  </p>
+                </div>
+              </div>
+
+              {/* Brand Positioning */}
+              <div className="mb-8">
+                <h3 className="text-3xl font-bold text-gray-900 mb-6">4. Brand Positioning</h3>
+                <div className="mb-6">
+                  <h4 className="text-xl font-bold text-blue-star-700 mb-3">Blue Star Property Management is built for:</h4>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                    <div className="flex items-start">
+                      <span className="text-blue-star-600 mr-3">•</span>
+                      <span className="text-gray-700">Owners of multifamily (2–20 units)</span>
+                    </div>
+                    <div className="flex items-start">
+                      <span className="text-blue-star-600 mr-3">•</span>
+                      <span className="text-gray-700">Small to midsize apartment complexes (20–100 units)</span>
+                    </div>
+                    <div className="flex items-start">
+                      <span className="text-blue-star-600 mr-3">•</span>
+                      <span className="text-gray-700">Commercial offices</span>
+                    </div>
+                    <div className="flex items-start">
+                      <span className="text-blue-star-600 mr-3">•</span>
+                      <span className="text-gray-700">Retail strip centers</span>
+                    </div>
+                    <div className="flex items-start">
+                      <span className="text-blue-star-600 mr-3">•</span>
+                      <span className="text-gray-700">Warehouse and flex space</span>
+                    </div>
+                    <div className="flex items-start">
+                      <span className="text-blue-star-600 mr-3">•</span>
+                      <span className="text-gray-700">Government and municipal buildings</span>
+                    </div>
+                  </div>
+                </div>
+                <div className="bg-gray-50 p-6 rounded-lg">
+                  <h4 className="text-xl font-bold text-blue-star-700 mb-3">We operate with:</h4>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                    <div className="flex items-start">
+                      <span className="text-blue-star-600 mr-3">•</span>
+                      <span className="text-gray-700">Private-equity discipline</span>
+                    </div>
+                    <div className="flex items-start">
+                      <span className="text-blue-star-600 mr-3">•</span>
+                      <span className="text-gray-700">Insurance-backed risk management</span>
+                    </div>
+                    <div className="flex items-start">
+                      <span className="text-blue-star-600 mr-3">•</span>
+                      <span className="text-gray-700">Finance-driven asset optimization</span>
+                    </div>
+                    <div className="flex items-start">
+                      <span className="text-blue-star-600 mr-3">•</span>
+                      <span className="text-gray-700">Transparent reporting and compliance</span>
+                    </div>
+                  </div>
+                  <p className="text-gray-700 mt-4 font-semibold italic">
+                    No distractions. No homeowner emotions. Just real assets, real income, real performance.
+                  </p>
+                </div>
+              </div>
+
+              {/* Why This Company Exists */}
+              <div className="mb-8">
+                <h3 className="text-3xl font-bold text-gray-900 mb-6">5. Why This Company Exists</h3>
+                <p className="text-gray-700 leading-relaxed mb-4">
+                  Because Texas—and the entire U.S.—is entering a generational shift:
+                </p>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-3 mb-6">
+                  <div className="flex items-start">
+                    <span className="text-blue-star-600 mr-3">•</span>
+                    <span className="text-gray-700">Multifamily demand is surging</span>
+                  </div>
+                  <div className="flex items-start">
+                    <span className="text-blue-star-600 mr-3">•</span>
+                    <span className="text-gray-700">Commercial owners need professional management</span>
+                  </div>
+                  <div className="flex items-start">
+                    <span className="text-blue-star-600 mr-3">•</span>
+                    <span className="text-gray-700">Investors need transparent, PE-style operations</span>
+                  </div>
+                  <div className="flex items-start">
+                    <span className="text-blue-star-600 mr-3">•</span>
+                    <span className="text-gray-700">Government agencies require compliant, reliable facility management</span>
+                  </div>
+                  <div className="flex items-start">
+                    <span className="text-blue-star-600 mr-3">•</span>
+                    <span className="text-gray-700">Institutional buyers are moving down-market into 10–100 unit buildings</span>
+                  </div>
+                  <div className="flex items-start">
+                    <span className="text-blue-star-600 mr-3">•</span>
+                    <span className="text-gray-700">AI will reduce white-collar opportunities, increasing the value of real assets</span>
+                  </div>
+                </div>
+                <div className="bg-blue-50 border-l-4 border-blue-star-600 p-6">
+                  <p className="text-gray-700 mb-3 font-semibold">Blue Star Property Management is designed to capture this shift by offering a single operational platform with:</p>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
+                    <div className="flex items-start">
+                      <span className="text-blue-star-600 font-bold mr-3">✔</span>
+                      <span className="text-gray-700">Property management</span>
+                    </div>
+                    <div className="flex items-start">
+                      <span className="text-blue-star-600 font-bold mr-3">✔</span>
+                      <span className="text-gray-700">Tenant lifecycle management</span>
+                    </div>
+                    <div className="flex items-start">
+                      <span className="text-blue-star-600 font-bold mr-3">✔</span>
+                      <span className="text-gray-700">Maintenance coordination</span>
+                    </div>
+                    <div className="flex items-start">
+                      <span className="text-blue-star-600 font-bold mr-3">✔</span>
+                      <span className="text-gray-700">Financial reporting + budgeting</span>
+                    </div>
+                    <div className="flex items-start">
+                      <span className="text-blue-star-600 font-bold mr-3">✔</span>
+                      <span className="text-gray-700">Insurance + risk support</span>
+                    </div>
+                    <div className="flex items-start">
+                      <span className="text-blue-star-600 font-bold mr-3">✔</span>
+                      <span className="text-gray-700">Capital project oversight</span>
+                    </div>
+                    <div className="flex items-start">
+                      <span className="text-blue-star-600 font-bold mr-3">✔</span>
+                      <span className="text-gray-700">Government-compliant processes</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Strategic Differentiators */}
+              <div className="mb-8">
+                <h3 className="text-3xl font-bold text-gray-900 mb-6">6. Strategic Differentiators</h3>
+                <div className="space-y-6">
+                  <div className="bg-indigo-50 border-l-4 border-indigo-600 p-6">
+                    <h4 className="text-lg font-bold text-indigo-800 mb-3">A. Built inside a private-equity ecosystem</h4>
+                    <p className="text-gray-700 mb-3">Backed by BSEG, BSPM benefits from:</p>
+                    <ul className="space-y-2 text-gray-700 ml-6">
+                      <li className="flex items-start">
+                        <span className="text-indigo-600 mr-3">•</span>
+                        <span>Shared financial systems</span>
+                      </li>
+                      <li className="flex items-start">
+                        <span className="text-indigo-600 mr-3">•</span>
+                        <span>Internal insurance brokerage (BSHI)</span>
+                      </li>
+                      <li className="flex items-start">
+                        <span className="text-indigo-600 mr-3">•</span>
+                        <span>Internal hard-money lending through FinCo</span>
+                      </li>
+                      <li className="flex items-start">
+                        <span className="text-indigo-600 mr-3">•</span>
+                        <span>Internal property acquisition partners</span>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div className="bg-teal-50 border-l-4 border-teal-600 p-6">
+                    <h4 className="text-lg font-bold text-teal-800 mb-3">B. Multifamily and commercial only</h4>
+                    <p className="text-gray-700 mb-3">We do not manage single-family rentals. This creates:</p>
+                    <ul className="space-y-2 text-gray-700 ml-6">
+                      <li className="flex items-start">
+                        <span className="text-teal-600 mr-3">•</span>
+                        <span>Higher margins</span>
+                      </li>
+                      <li className="flex items-start">
+                        <span className="text-teal-600 mr-3">•</span>
+                        <span>Less churn</span>
+                      </li>
+                      <li className="flex items-start">
+                        <span className="text-teal-600 mr-3">•</span>
+                        <span>More predictable clients</span>
+                      </li>
+                      <li className="flex items-start">
+                        <span className="text-teal-600 mr-3">•</span>
+                        <span>Institutional-quality processes</span>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div className="bg-cyan-50 border-l-4 border-cyan-600 p-6">
+                    <h4 className="text-lg font-bold text-cyan-800 mb-3">C. Transparent, investor-grade reporting</h4>
+                    <p className="text-gray-700 mb-3">Owners receive:</p>
+                    <ul className="space-y-2 text-gray-700 ml-6">
+                      <li className="flex items-start">
+                        <span className="text-cyan-600 mr-3">•</span>
+                        <span>Monthly financials</span>
+                      </li>
+                      <li className="flex items-start">
+                        <span className="text-cyan-600 mr-3">•</span>
+                        <span>NOI optimization reports</span>
+                      </li>
+                      <li className="flex items-start">
+                        <span className="text-cyan-600 mr-3">•</span>
+                        <span>CapEx forecasts</span>
+                      </li>
+                      <li className="flex items-start">
+                        <span className="text-cyan-600 mr-3">•</span>
+                        <span>Performance dashboards</span>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div className="bg-amber-50 border-l-4 border-amber-600 p-6">
+                    <h4 className="text-lg font-bold text-amber-800 mb-3">D. Insurance-backed risk mitigation</h4>
+                    <p className="text-gray-700 mb-3">Because BSHI is in-house, we ensure:</p>
+                    <ul className="space-y-2 text-gray-700 ml-6">
+                      <li className="flex items-start">
+                        <span className="text-amber-600 mr-3">•</span>
+                        <span>Correct coverage</span>
+                      </li>
+                      <li className="flex items-start">
+                        <span className="text-amber-600 mr-3">•</span>
+                        <span>Fast claims support</span>
+                      </li>
+                      <li className="flex items-start">
+                        <span className="text-amber-600 mr-3">•</span>
+                        <span>Lower liability exposure</span>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div className="bg-rose-50 border-l-4 border-rose-600 p-6">
+                    <h4 className="text-lg font-bold text-rose-800 mb-3">E. Compliance-ready government service</h4>
+                    <p className="text-gray-700 mb-3">We target:</p>
+                    <div className="grid grid-cols-2 md:grid-cols-3 gap-2 text-gray-700 ml-6">
+                      <div className="flex items-start">
+                        <span className="text-rose-600 mr-2">•</span>
+                        <span>Federal</span>
+                      </div>
+                      <div className="flex items-start">
+                        <span className="text-rose-600 mr-2">•</span>
+                        <span>State</span>
+                      </div>
+                      <div className="flex items-start">
+                        <span className="text-rose-600 mr-2">•</span>
+                        <span>County</span>
+                      </div>
+                      <div className="flex items-start">
+                        <span className="text-rose-600 mr-2">•</span>
+                        <span>City</span>
+                      </div>
+                      <div className="flex items-start">
+                        <span className="text-rose-600 mr-2">•</span>
+                        <span>School district</span>
+                      </div>
+                      <div className="flex items-start">
+                        <span className="text-rose-600 mr-2">•</span>
+                        <span>Utility districts</span>
+                      </div>
+                    </div>
+                    <p className="text-gray-700 mt-3 font-semibold">This opens the door to large, multi-year public contracts.</p>
+                  </div>
+                </div>
+              </div>
+
+              {/* 5-7 Year Business Plan */}
+              <div className="mb-8">
+                <h3 className="text-3xl font-bold text-gray-900 mb-6 flex items-center">
+                  <span className="text-yellow-500 mr-3">⭐</span>
+                  7. 5–7 Year Business Plan
+                </h3>
+
+                {/* Year 1-2 */}
+                <div className="mb-6 border-l-4 border-yellow-500 bg-yellow-50 p-6">
+                  <h4 className="text-2xl font-bold text-gray-900 mb-3">Year 1–2: Foundation & Internal Portfolio</h4>
+                  <ul className="space-y-2 text-gray-700 mb-4">
+                    <li className="flex items-start">
+                      <span className="text-yellow-600 mr-3">•</span>
+                      <span>Manage first 1–3 internally owned multifamily buildings</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-yellow-600 mr-3">•</span>
+                      <span>Build processes: reporting, maintenance flow, financial systems</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-yellow-600 mr-3">•</span>
+                      <span>Begin external client onboarding (small multifamily)</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-yellow-600 mr-3">•</span>
+                      <span>Develop reputation via high-touch service</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-yellow-600 mr-3">•</span>
+                      <span>Establish relationships with real estate investors and flippers</span>
+                    </li>
+                  </ul>
+                  <div className="bg-white p-4 rounded-lg">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-3 text-sm text-gray-700">
+                      <div><span className="font-semibold">Revenue Target:</span> $20K–$40K/year</div>
+                      <div><span className="font-semibold">Profit Margin:</span> 60–70%</div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Year 3-4 */}
+                <div className="mb-6 border-l-4 border-blue-500 bg-blue-50 p-6">
+                  <h4 className="text-2xl font-bold text-gray-900 mb-3">Year 3–4: Scaling with Apartments + Commercial</h4>
+                  <ul className="space-y-2 text-gray-700 mb-4">
+                    <li className="flex items-start">
+                      <span className="text-blue-600 mr-3">•</span>
+                      <span>Add 8–20 unit multifamily clients</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-blue-600 mr-3">•</span>
+                      <span>Add 1–3 commercial properties</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-blue-600 mr-3">•</span>
+                      <span>Hire part-time admin support (if needed)</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-blue-600 mr-3">•</span>
+                      <span>Create standardized owner dashboards</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-blue-600 mr-3">•</span>
+                      <span>Begin capital project oversight</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-blue-600 mr-3">•</span>
+                      <span>Build municipal/government RFP capability</span>
+                    </li>
+                  </ul>
+                  <div className="bg-white p-4 rounded-lg">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-3 text-sm text-gray-700">
+                      <div><span className="font-semibold">Revenue Target:</span> $110K–$190K/year</div>
+                      <div><span className="font-semibold">Profit Margin:</span> 55–65%</div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Year 5-6 */}
+                <div className="mb-6 border-l-4 border-green-500 bg-green-50 p-6">
+                  <h4 className="text-2xl font-bold text-gray-900 mb-3">Year 5–6: Regional Expansion</h4>
+                  <ul className="space-y-2 text-gray-700 mb-4">
+                    <li className="flex items-start">
+                      <span className="text-green-600 mr-3">•</span>
+                      <span>Manage 150–300 units</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-green-600 mr-3">•</span>
+                      <span>Add 2–3 apartment complexes (20–60 units each)</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-green-600 mr-3">•</span>
+                      <span>Expand into commercial management (offices & retail)</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-green-600 mr-3">•</span>
+                      <span>Add full-time operations assistant</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-green-600 mr-3">•</span>
+                      <span>Strengthen government contracting relationships</span>
+                    </li>
+                  </ul>
+                  <div className="bg-white p-4 rounded-lg">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-3 text-sm text-gray-700">
+                      <div><span className="font-semibold">Revenue Target:</span> $185K–$380K/year</div>
+                      <div><span className="font-semibold">Profit Margin:</span> 50–60%</div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Year 7 */}
+                <div className="mb-6 border-l-4 border-purple-500 bg-purple-50 p-6">
+                  <h4 className="text-2xl font-bold text-gray-900 mb-3">Year 7: Midsize Regional Management Firm</h4>
+                  <ul className="space-y-2 text-gray-700 mb-4">
+                    <li className="flex items-start">
+                      <span className="text-purple-600 mr-3">•</span>
+                      <span>300–450 units under management</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-purple-600 mr-3">•</span>
+                      <span>5–10 commercial properties</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-purple-600 mr-3">•</span>
+                      <span>Multiple government contracts</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-purple-600 mr-3">•</span>
+                      <span>NOI performance systems fully automated</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-purple-600 mr-3">•</span>
+                      <span>Potential expansion into facilities management</span>
+                    </li>
+                  </ul>
+                  <div className="bg-white p-4 rounded-lg">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-3 text-sm text-gray-700">
+                      <div><span className="font-semibold">Revenue Target:</span> $425K–$675K/year</div>
+                      <div><span className="font-semibold">Profit Margin:</span> 45–55% (industry standard at scale)</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Financial Projection */}
+              <div className="mb-8">
+                <h3 className="text-3xl font-bold text-gray-900 mb-6 flex items-center">
+                  <span className="text-yellow-500 mr-3">⭐</span>
+                  Financial Projection (Based on Multifamily + Commercial Mix)
+                </h3>
+
+                {/* Fee Structure */}
+                <div className="mb-6">
+                  <h4 className="text-xl font-bold text-blue-star-700 mb-4">Fee Structure</h4>
+                  <div className="overflow-x-auto">
+                    <table className="w-full border-collapse bg-white shadow-lg rounded-lg overflow-hidden">
+                      <thead>
+                        <tr className="bg-gradient-to-r from-blue-star-700 to-blue-star-900 text-white">
+                          <th className="px-6 py-4 text-left font-bold">Service</th>
+                          <th className="px-6 py-4 text-left font-bold">Fee</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr className="border-b hover:bg-gray-50">
+                          <td className="px-6 py-4">Multifamily PM Fee</td>
+                          <td className="px-6 py-4 font-semibold">7–10% of gross rent</td>
+                        </tr>
+                        <tr className="border-b hover:bg-gray-50 bg-gray-50">
+                          <td className="px-6 py-4">Apartment Complex PM Fee</td>
+                          <td className="px-6 py-4 font-semibold">4–7%</td>
+                        </tr>
+                        <tr className="border-b hover:bg-gray-50">
+                          <td className="px-6 py-4">Commercial PM Fee</td>
+                          <td className="px-6 py-4 font-semibold">3–6%</td>
+                        </tr>
+                        <tr className="border-b hover:bg-gray-50 bg-gray-50">
+                          <td className="px-6 py-4">Leasing Fee</td>
+                          <td className="px-6 py-4 font-semibold">50–100% of 1 month rent</td>
+                        </tr>
+                        <tr className="border-b hover:bg-gray-50">
+                          <td className="px-6 py-4">Renewal Fee</td>
+                          <td className="px-6 py-4 font-semibold">$150–$300</td>
+                        </tr>
+                        <tr className="border-b hover:bg-gray-50 bg-gray-50">
+                          <td className="px-6 py-4">Maintenance Management</td>
+                          <td className="px-6 py-4 font-semibold">10–15% markup</td>
+                        </tr>
+                        <tr className="hover:bg-gray-50">
+                          <td className="px-6 py-4">Project Oversight</td>
+                          <td className="px-6 py-4 font-semibold">5–10% of project cost</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+
+                {/* Revenue Projection Summary */}
+                <div className="mb-6">
+                  <h4 className="text-xl font-bold text-blue-star-700 mb-4">Revenue Projection Summary</h4>
+                  <div className="overflow-x-auto">
+                    <table className="w-full border-collapse bg-white shadow-lg rounded-lg overflow-hidden">
+                      <thead>
+                        <tr className="bg-gradient-to-r from-blue-star-700 to-blue-star-900 text-white">
+                          <th className="px-6 py-4 text-left font-bold">Year</th>
+                          <th className="px-6 py-4 text-left font-bold">Units Managed</th>
+                          <th className="px-6 py-4 text-left font-bold">Annual Revenue</th>
+                          <th className="px-6 py-4 text-left font-bold">Net Profit</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr className="border-b hover:bg-gray-50">
+                          <td className="px-6 py-4 font-semibold">1</td>
+                          <td className="px-6 py-4">6–12</td>
+                          <td className="px-6 py-4">$7K–$15K</td>
+                          <td className="px-6 py-4 font-semibold text-green-700">$5K–$10K</td>
+                        </tr>
+                        <tr className="border-b hover:bg-gray-50 bg-gray-50">
+                          <td className="px-6 py-4 font-semibold">2</td>
+                          <td className="px-6 py-4">15–25</td>
+                          <td className="px-6 py-4">$22K–$36K</td>
+                          <td className="px-6 py-4 font-semibold text-green-700">$15K–$25K</td>
+                        </tr>
+                        <tr className="border-b hover:bg-gray-50">
+                          <td className="px-6 py-4 font-semibold">3</td>
+                          <td className="px-6 py-4">40–60</td>
+                          <td className="px-6 py-4">$65K–$95K</td>
+                          <td className="px-6 py-4 font-semibold text-green-700">$45K–$70K</td>
+                        </tr>
+                        <tr className="border-b hover:bg-gray-50 bg-gray-50">
+                          <td className="px-6 py-4 font-semibold">4</td>
+                          <td className="px-6 py-4">90–150</td>
+                          <td className="px-6 py-4">$110K–$190K</td>
+                          <td className="px-6 py-4 font-semibold text-green-700">$75K–$130K</td>
+                        </tr>
+                        <tr className="border-b hover:bg-gray-50">
+                          <td className="px-6 py-4 font-semibold">5</td>
+                          <td className="px-6 py-4">150–225</td>
+                          <td className="px-6 py-4">$185K–$300K</td>
+                          <td className="px-6 py-4 font-semibold text-green-700">$125K–$210K</td>
+                        </tr>
+                        <tr className="border-b hover:bg-gray-50 bg-gray-50">
+                          <td className="px-6 py-4 font-semibold">6</td>
+                          <td className="px-6 py-4">225–300</td>
+                          <td className="px-6 py-4">$280K–$380K</td>
+                          <td className="px-6 py-4 font-semibold text-green-700">$180K–$260K</td>
+                        </tr>
+                        <tr className="hover:bg-gray-50">
+                          <td className="px-6 py-4 font-semibold">7</td>
+                          <td className="px-6 py-4">300–450</td>
+                          <td className="px-6 py-4">$425K–$675K</td>
+                          <td className="px-6 py-4 font-semibold text-green-700">$275K–$450K</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+
+              {/* Operational Structure */}
+              <div className="mb-8">
+                <h3 className="text-3xl font-bold text-gray-900 mb-6 flex items-center">
+                  <span className="text-yellow-500 mr-3">⭐</span>
+                  Operational Structure (Years 1–7)
+                </h3>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div className="bg-blue-50 border-l-4 border-blue-600 p-6">
+                    <h4 className="text-lg font-bold text-blue-800 mb-3">Years 1–3</h4>
+                    <ul className="space-y-2 text-gray-700">
+                      <li className="flex items-start">
+                        <span className="text-blue-600 mr-3">•</span>
+                        <span>Managed entirely by Howard & Daron</span>
+                      </li>
+                      <li className="flex items-start">
+                        <span className="text-blue-600 mr-3">•</span>
+                        <span>Software-driven processes</span>
+                      </li>
+                      <li className="flex items-start">
+                        <span className="text-blue-600 mr-3">•</span>
+                        <span>Minimal overhead</span>
+                      </li>
+                      <li className="flex items-start">
+                        <span className="text-blue-600 mr-3">•</span>
+                        <span>High profit margins</span>
+                      </li>
+                    </ul>
+                  </div>
+                  <div className="bg-green-50 border-l-4 border-green-600 p-6">
+                    <h4 className="text-lg font-bold text-green-800 mb-3">Years 4–7</h4>
+                    <ul className="space-y-2 text-gray-700">
+                      <li className="flex items-start">
+                        <span className="text-green-600 mr-3">•</span>
+                        <span>Add part-time → full-time assistant</span>
+                      </li>
+                      <li className="flex items-start">
+                        <span className="text-green-600 mr-3">•</span>
+                        <span>Add maintenance coordination software</span>
+                      </li>
+                      <li className="flex items-start">
+                        <span className="text-green-600 mr-3">•</span>
+                        <span>Begin structured vendor network</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              {/* Cross-Ecosystem Synergies */}
+              <div className="mb-8">
+                <h3 className="text-3xl font-bold text-gray-900 mb-6 flex items-center">
+                  <span className="text-yellow-500 mr-3">⭐</span>
+                  Cross-Ecosystem Synergies
+                </h3>
+                <div className="space-y-6">
+                  <div className="bg-purple-50 border-l-4 border-purple-600 p-6">
+                    <h4 className="text-lg font-bold text-purple-800 mb-3">🔹 Blue Star Heritage Insurance</h4>
+                    <p className="text-gray-700 mb-2">Every client becomes an insurance opportunity for:</p>
+                    <div className="grid grid-cols-2 gap-2 text-gray-700 ml-6">
+                      <div className="flex items-start">
+                        <span className="text-purple-600 mr-2">•</span>
+                        <span>Property coverage</span>
+                      </div>
+                      <div className="flex items-start">
+                        <span className="text-purple-600 mr-2">•</span>
+                        <span>Liability</span>
+                      </div>
+                      <div className="flex items-start">
+                        <span className="text-purple-600 mr-2">•</span>
+                        <span>Umbrella</span>
+                      </div>
+                      <div className="flex items-start">
+                        <span className="text-purple-600 mr-2">•</span>
+                        <span>Commercial packages</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="bg-blue-50 border-l-4 border-blue-600 p-6">
+                    <h4 className="text-lg font-bold text-blue-800 mb-3">🔹 Blue Star FinCo</h4>
+                    <p className="text-gray-700 mb-2">Provides:</p>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-2 text-gray-700 ml-6">
+                      <div className="flex items-start">
+                        <span className="text-blue-600 mr-2">•</span>
+                        <span>Renovation loans</span>
+                      </div>
+                      <div className="flex items-start">
+                        <span className="text-blue-600 mr-2">•</span>
+                        <span>Acquisition capital</span>
+                      </div>
+                      <div className="flex items-start">
+                        <span className="text-blue-600 mr-2">•</span>
+                        <span>Emergency repair financing</span>
+                      </div>
+                      <div className="flex items-start">
+                        <span className="text-blue-600 mr-2">•</span>
+                        <span>Bridge loans</span>
+                      </div>
+                      <div className="flex items-start">
+                        <span className="text-blue-600 mr-2">•</span>
+                        <span>Hard-money lending</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="bg-green-50 border-l-4 border-green-600 p-6">
+                    <h4 className="text-lg font-bold text-green-800 mb-3">🔹 Blue Star Property Holdings</h4>
+                    <p className="text-gray-700 mb-2">When real estate is acquired internally:</p>
+                    <ul className="space-y-2 text-gray-700 ml-6">
+                      <li className="flex items-start">
+                        <span className="text-green-600 mr-2">•</span>
+                        <span>BSPM manages it</span>
+                      </li>
+                      <li className="flex items-start">
+                        <span className="text-green-600 mr-2">•</span>
+                        <span>BSHI insures it</span>
+                      </li>
+                      <li className="flex items-start">
+                        <span className="text-green-600 mr-2">•</span>
+                        <span>FinCo finances it</span>
+                      </li>
+                    </ul>
+                    <p className="text-gray-700 mt-3 font-semibold">This creates a closed wealth loop.</p>
+                  </div>
+
+                  <div className="bg-amber-50 border-l-4 border-amber-600 p-6">
+                    <h4 className="text-lg font-bold text-amber-800 mb-3">🔹 Blue Star Pension Trust</h4>
+                    <p className="text-gray-700">Uses high cash value life insurance to protect long-term earnings from:</p>
+                    <ul className="space-y-2 text-gray-700 ml-6 mt-2">
+                      <li className="flex items-start">
+                        <span className="text-amber-600 mr-2">•</span>
+                        <span>Management fees</span>
+                      </li>
+                      <li className="flex items-start">
+                        <span className="text-amber-600 mr-2">•</span>
+                        <span>NOI participation</span>
+                      </li>
+                      <li className="flex items-start">
+                        <span className="text-amber-600 mr-2">•</span>
+                        <span>Property equity stakes</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              {/* One-Sentence Summary */}
+              <div className="mb-8">
+                <h3 className="text-3xl font-bold text-gray-900 mb-6 flex items-center">
+                  <span className="text-yellow-500 mr-3">⭐</span>
+                  One-Sentence Summary of This Whole Strategy
+                </h3>
+                <div className="bg-gradient-to-r from-blue-star-600 to-blue-star-800 text-white p-8 rounded-xl text-center">
+                  <p className="text-xl leading-relaxed font-medium">
+                    Blue Star Property Management is the operational engine that turns real estate ownership into consistent, predictable, and scalable cash flow across the entire Blue Star ecosystem.
+                  </p>
+                </div>
+              </div>
+
+              {/* Close Button */}
+              <div className="flex justify-center pt-6 border-t">
+                <button
+                  onClick={() => setShowPropertyMgmtModal(false)}
                   className="bg-gray-200 text-gray-700 px-8 py-3 rounded-lg font-semibold hover:bg-gray-300 transition"
                 >
                   Close
