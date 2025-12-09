@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 function App() {
   const [showBSHIModal, setShowBSHIModal] = useState(false);
   const [showFinCoModal, setShowFinCoModal] = useState(false);
+  const [showPensionModal, setShowPensionModal] = useState(false);
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-white to-gray-50">
@@ -262,15 +263,15 @@ function App() {
                 </p>
               </div>
               <div className="space-y-3">
-                <a
-                  href="#"
+                <button
+                  onClick={() => setShowPensionModal(true)}
                   className="w-full text-white hover:text-blue-star-100 font-semibold flex items-center justify-center group-hover:translate-x-1 transition-transform"
                 >
-                  Learn About Trust Structure
+                  Read Full Business Plan
                   <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                   </svg>
-                </a>
+                </button>
                 <a
                   href="#"
                   className="w-full text-white text-opacity-70 hover:text-white font-semibold flex items-center justify-center group-hover:translate-x-1 transition-transform"
@@ -1274,6 +1275,388 @@ function App() {
               <div className="text-center pt-4">
                 <button
                   onClick={() => setShowFinCoModal(false)}
+                  className="bg-gray-200 text-gray-700 px-8 py-3 rounded-lg font-semibold hover:bg-gray-300 transition"
+                >
+                  Close
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* Pension Trust Business Plan Modal */}
+      {showPensionModal && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4" onClick={() => setShowPensionModal(false)}>
+          <div className="bg-white rounded-2xl max-w-5xl max-h-[90vh] overflow-y-auto shadow-2xl" onClick={(e) => e.stopPropagation()}>
+            <div className="sticky top-0 bg-gradient-to-r from-blue-star-800 via-blue-star-700 to-blue-star-900 text-white p-6 rounded-t-2xl flex justify-between items-start">
+              <div>
+                <h2 className="text-3xl font-bold mb-2">Blue Star Pension Trust</h2>
+                <p className="text-blue-star-100">Generational Wealth • Tax Efficiency • Long-Term Capital Reserves</p>
+              </div>
+              <button
+                onClick={() => setShowPensionModal(false)}
+                className="text-white hover:text-gray-200 text-3xl font-bold ml-4"
+              >
+                ×
+              </button>
+            </div>
+
+            <div className="p-8 space-y-8">
+              {/* Introduction */}
+              <div className="prose max-w-none">
+                <p className="text-lg text-gray-700 leading-relaxed">
+                  The Blue Star Pension Trust is the long-term wealth engine and stabilizing financial foundation of the Blue Star ecosystem. While the operating companies create cash flow and FinCo generates high-yield lending returns, the Pension Trust converts that success into permanent, protected, multi-generational wealth.
+                </p>
+                <p className="text-gray-700 leading-relaxed">
+                  Built on high cash-value life insurance strategies used by family offices, private equity firms, and the ultra-wealthy, the Pension Trust allows the partners of Blue Star to build a tax-efficient reservoir of capital that grows predictably, compounds annually, and provides liquidity for personal and business needs without disrupting company operations.
+                </p>
+                <p className="text-xl font-bold text-blue-star-700 mt-6">
+                  This trust is not a retirement plan — it is the perpetual vault of the Blue Star enterprise.
+                </p>
+              </div>
+
+              {/* Trust Profile */}
+              <div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-6 flex items-center">
+                  <span className="text-blue-star-600 mr-2">⭐</span>
+                  Trust Profile
+                </h3>
+
+                <div className="space-y-6">
+                  {/* Primary Purpose */}
+                  <div className="bg-blue-star-50 p-6 rounded-xl">
+                    <h4 className="text-xl font-bold text-gray-900 mb-3">Primary Purpose</h4>
+                    <p className="text-gray-700 mb-3">The Pension Trust exists to:</p>
+                    <ul className="space-y-2 text-gray-700">
+                      <li>• Build long-term, stable, tax-efficient wealth</li>
+                      <li>• Protect partners and heirs through permanent insurance coverage</li>
+                      <li>• Provide liquidity through policy loans (for expansions, down payments, emergencies)</li>
+                      <li>• Create a capital reserve insulated from lawsuits, creditors, or business failure</li>
+                      <li>• Serve as a self-funded "bank" for future ventures</li>
+                      <li>• Ensure Blue Star's generational continuity</li>
+                    </ul>
+                  </div>
+
+                  {/* Core Strategy */}
+                  <div className="bg-gradient-to-br from-blue-star-600 to-blue-star-800 text-white p-6 rounded-xl">
+                    <h4 className="text-xl font-bold mb-3">Core Strategy</h4>
+                    <p className="mb-4">The trust relies on a portfolio of high cash-value whole life insurance policies with the following characteristics:</p>
+                    <div className="grid md:grid-cols-2 gap-3">
+                      <div className="flex items-start">
+                        <span className="text-blue-star-200 mr-2">✓</span>
+                        <span>10–40x leverage over the life of the insured</span>
+                      </div>
+                      <div className="flex items-start">
+                        <span className="text-blue-star-200 mr-2">✓</span>
+                        <span>Guaranteed growth + dividends</span>
+                      </div>
+                      <div className="flex items-start">
+                        <span className="text-blue-star-200 mr-2">✓</span>
+                        <span>Tax-free compounding of cash value</span>
+                      </div>
+                      <div className="flex items-start">
+                        <span className="text-blue-star-200 mr-2">✓</span>
+                        <span>Tax-free distribution through policy loans</span>
+                      </div>
+                      <div className="flex items-start">
+                        <span className="text-blue-star-200 mr-2">✓</span>
+                        <span>Death benefit to heirs or the trust</span>
+                      </div>
+                      <div className="flex items-start">
+                        <span className="text-blue-star-200 mr-2">✓</span>
+                        <span>Asset protection (TX favorable)</span>
+                      </div>
+                      <div className="flex items-start">
+                        <span className="text-blue-star-200 mr-2">✓</span>
+                        <span>Not correlated to stock market volatility</span>
+                      </div>
+                    </div>
+                    <p className="mt-4 font-bold text-lg">
+                      This makes the Pension Trust the safest and most predictable financial pillar in the BSEG system.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              {/* How the Pension Trust Works */}
+              <div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-6 flex items-center">
+                  <span className="text-blue-star-600 mr-2">⭐</span>
+                  How the Pension Trust Works
+                </h3>
+
+                <div className="space-y-6">
+                  {/* Step 1 */}
+                  <div className="bg-gray-50 p-6 rounded-xl border-l-4 border-blue-star-500">
+                    <div className="flex items-start">
+                      <span className="bg-blue-star-600 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold mr-4 flex-shrink-0">1</span>
+                      <div className="flex-1">
+                        <h4 className="text-xl font-bold text-gray-900 mb-3">Annual Contributions</h4>
+                        <div className="space-y-2 text-gray-700">
+                          <p>• BSEG contributes 5–10% of annual profits</p>
+                          <p>• BSHI contributes once profitable</p>
+                          <p>• FinCo contributes once loan revenue stabilizes</p>
+                        </div>
+                        <p className="mt-3 text-gray-600 italic">Each contribution funds whole life premiums to increase cash value.</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Step 2 */}
+                  <div className="bg-blue-star-50 p-6 rounded-xl border-l-4 border-blue-star-600">
+                    <div className="flex items-start">
+                      <span className="bg-blue-star-700 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold mr-4 flex-shrink-0">2</span>
+                      <div className="flex-1">
+                        <h4 className="text-xl font-bold text-gray-900 mb-3">Rapid Cash Value Growth</h4>
+                        <p className="text-gray-700">
+                          Policies are structured for maximized early cash value, allowing <strong>60–80% liquidity in Year 1</strong> and <strong>100%+ liquidity in Years 3–7</strong>.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Step 3 */}
+                  <div className="bg-gray-50 p-6 rounded-xl border-l-4 border-green-500">
+                    <div className="flex items-start">
+                      <span className="bg-green-600 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold mr-4 flex-shrink-0">3</span>
+                      <div className="flex-1">
+                        <h4 className="text-xl font-bold text-gray-900 mb-3">Liquidity Through Policy Loans</h4>
+                        <p className="text-gray-700 mb-3">The trust can borrow against cash value at 4–6% interest to:</p>
+                        <div className="space-y-2 text-gray-700 mb-4">
+                          <p>• Fund property purchases (through Property Holdings)</p>
+                          <p>• Provide capital to FinCo for lending</p>
+                          <p>• Support Blue Star expansions</p>
+                          <p>• Cover emergencies without disrupting operations</p>
+                        </div>
+                        <div className="bg-green-50 p-4 rounded-lg">
+                          <p className="font-bold text-green-900 mb-2">Loans do NOT require:</p>
+                          <div className="grid md:grid-cols-2 gap-2 text-sm text-green-800">
+                            <div>• Credit checks</div>
+                            <div>• Income verification</div>
+                            <div>• Debt ratios</div>
+                            <div>• External lender approval</div>
+                          </div>
+                          <p className="mt-3 font-bold text-green-900">The trust effectively becomes its own bank.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Step 4 */}
+                  <div className="bg-gradient-to-br from-blue-star-700 to-blue-star-900 text-white p-6 rounded-xl border-l-4 border-yellow-400">
+                    <div className="flex items-start">
+                      <span className="bg-yellow-500 text-gray-900 rounded-full w-8 h-8 flex items-center justify-center font-bold mr-4 flex-shrink-0">4</span>
+                      <div className="flex-1">
+                        <h4 className="text-xl font-bold mb-3">Death Benefits for Generational Wealth</h4>
+                        <p className="mb-3">When a partner passes away:</p>
+                        <div className="space-y-2 mb-4">
+                          <p>• The trust receives the tax-free payout</p>
+                          <p>• Funds remain in the trust permanently</p>
+                          <p>• Income continues to support heirs through structured payouts</p>
+                          <p>• The trust becomes stronger with every generation</p>
+                        </div>
+                        <p className="font-bold text-xl text-yellow-300">This is how family dynasties are built.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Strategic Integration */}
+              <div className="bg-gradient-to-br from-green-50 to-emerald-50 p-6 rounded-xl border-2 border-green-200">
+                <h3 className="text-2xl font-bold text-gray-900 mb-4 flex items-center">
+                  <span className="text-green-600 mr-2">⭐</span>
+                  Strategic Integration with Blue Star Ecosystem
+                </h3>
+                <p className="text-gray-700 mb-4">The Pension Trust supports every division:</p>
+                <div className="space-y-3">
+                  <div className="bg-white p-4 rounded-lg">
+                    <h5 className="font-bold text-gray-900 mb-2">✓ Property Holdings</h5>
+                    <p className="text-gray-700 text-sm">Provides down payments or renovation capital through internal loans.</p>
+                  </div>
+                  <div className="bg-white p-4 rounded-lg">
+                    <h5 className="font-bold text-gray-900 mb-2">✓ FinCo</h5>
+                    <p className="text-gray-700 text-sm">Supplies capital for lending without seeking external investors.</p>
+                  </div>
+                  <div className="bg-white p-4 rounded-lg">
+                    <h5 className="font-bold text-gray-900 mb-2">✓ BSEG (Holdings)</h5>
+                    <p className="text-gray-700 text-sm">Ensures long-term security and a stable reserve fund.</p>
+                  </div>
+                  <div className="bg-white p-4 rounded-lg">
+                    <h5 className="font-bold text-gray-900 mb-2">✓ BSHI (Insurance Agency)</h5>
+                    <p className="text-gray-700 text-sm">Supports cross-selling life insurance (eventually, when licensed).</p>
+                  </div>
+                </div>
+                <p className="mt-4 font-semibold text-gray-800 text-center text-lg">
+                  The trust is the silent engine that keeps the ecosystem stable and growing for decades.
+                </p>
+              </div>
+
+              {/* 5-7 Year Strategic Plan */}
+              <div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-6 flex items-center">
+                  <span className="text-blue-star-600 mr-2">⭐</span>
+                  5–7 Year Strategic Plan
+                </h3>
+
+                <div className="space-y-6">
+                  {/* Phase 1 */}
+                  <div className="border-l-4 border-blue-star-500 pl-6 bg-blue-star-50 p-6 rounded-r-xl">
+                    <div className="flex items-center mb-3">
+                      <span className="bg-blue-star-600 text-white px-3 py-1 rounded-full text-sm font-bold mr-3">Phase 1</span>
+                      <h4 className="text-xl font-bold text-gray-900">Years 1–2: Foundation & Policy Acquisition</h4>
+                    </div>
+                    <ul className="space-y-2 text-gray-700 mb-4">
+                      <li>• Establish trust charter and governance</li>
+                      <li>• Acquire first high cash-value whole life policies for each partner</li>
+                      <li>• Set annual contribution targets (e.g., $10K–$40K per partner)</li>
+                      <li>• Build relationship with top-tier mutual insurer (NYL, MassMutual, Guardian)</li>
+                      <li>• Begin early cash value accumulation</li>
+                    </ul>
+                    <div className="bg-white p-4 rounded-lg border-2 border-blue-star-300">
+                      <p className="font-bold text-gray-900">By end of Year 2:</p>
+                      <p className="text-blue-star-700 font-semibold">Trust cash value target → $40K–$80K</p>
+                    </div>
+                  </div>
+
+                  {/* Phase 2 */}
+                  <div className="border-l-4 border-green-500 pl-6 bg-green-50 p-6 rounded-r-xl">
+                    <div className="flex items-center mb-3">
+                      <span className="bg-green-600 text-white px-3 py-1 rounded-full text-sm font-bold mr-3">Phase 2</span>
+                      <h4 className="text-xl font-bold text-gray-900">Years 3–5: Liquidity Growth & Internal Banking</h4>
+                    </div>
+                    <ul className="space-y-2 text-gray-700 mb-4">
+                      <li>• Cash value becomes large enough to fund small internal loans</li>
+                      <li>• Begin funding Property Holdings or BSEG from trust policy loans</li>
+                      <li>• Contributions increase as BSHI and FinCo become profitable</li>
+                      <li>• Add policies for spouses or key partners</li>
+                      <li>• Use dividends to accelerate growth</li>
+                    </ul>
+                    <div className="bg-white p-4 rounded-lg border-2 border-green-300">
+                      <p className="font-bold text-gray-900 mb-2">By end of Year 5:</p>
+                      <div className="space-y-1 text-gray-700">
+                        <p>• Total trust cash value → <span className="font-semibold text-green-700">$120K–$250K</span></p>
+                        <p>• Annual dividend growth rate → <span className="font-semibold text-green-700">4–6%</span></p>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Phase 3 */}
+                  <div className="border-l-4 border-blue-star-800 pl-6 bg-gradient-to-br from-blue-star-700 to-blue-star-900 text-white p-6 rounded-r-xl">
+                    <div className="flex items-center mb-3">
+                      <span className="bg-white text-blue-star-700 px-3 py-1 rounded-full text-sm font-bold mr-3">Phase 3</span>
+                      <h4 className="text-xl font-bold">Years 5–7: Expansion & Multi-Generational Structuring</h4>
+                    </div>
+                    <ul className="space-y-2 mb-4">
+                      <li>• Acquire additional policies for succession planning</li>
+                      <li>• Begin using trust as a major funding source for real estate acquisitions</li>
+                      <li>• Fund FinCo expansion loans (highly profitable recycling)</li>
+                      <li>• Establish trust-owned investment accounts (ultra conservative)</li>
+                      <li>• Draft multi-generational distribution rules</li>
+                    </ul>
+                    <div className="bg-white bg-opacity-10 backdrop-blur p-4 rounded-lg">
+                      <p className="font-bold mb-3">By end of Year 7:</p>
+                      <div className="space-y-2 text-sm">
+                        <div className="flex justify-between">
+                          <span>Total trust cash value:</span>
+                          <span className="font-semibold text-yellow-300">$300K–$600K</span>
+                        </div>
+                        <div className="flex justify-between">
+                          <span>Death benefit total:</span>
+                          <span className="font-semibold text-yellow-300">$3M–$7M</span>
+                        </div>
+                        <div className="flex justify-between">
+                          <span>Policy loan capacity:</span>
+                          <span className="font-semibold text-yellow-300">$200K–$400K</span>
+                        </div>
+                      </div>
+                      <p className="mt-4 font-bold text-lg text-center">
+                        The trust becomes a fully functioning Family Office financial pillar.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* 7-Year Financial Projection */}
+              <div className="bg-gray-900 text-white p-6 rounded-xl">
+                <h3 className="text-2xl font-bold mb-4 flex items-center">
+                  <span className="mr-2">⭐</span>
+                  7-Year Financial Projection
+                </h3>
+                <p className="text-gray-300 mb-6 italic">Conservative, Industry Standard (Guardian, MassMutual, NYL Whole Life Policies)</p>
+
+                <div className="overflow-x-auto">
+                  <table className="w-full text-sm">
+                    <thead>
+                      <tr className="border-b border-gray-700">
+                        <th className="text-left py-3 px-2">Year</th>
+                        <th className="text-left py-3 px-2">Contributions</th>
+                        <th className="text-left py-3 px-2">Cash Value</th>
+                        <th className="text-left py-3 px-2">Loan Capacity</th>
+                        <th className="text-left py-3 px-2">Notes</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr className="border-b border-gray-800">
+                        <td className="py-3 px-2 font-semibold">1</td>
+                        <td className="py-3 px-2">$20K–$40K</td>
+                        <td className="py-3 px-2 text-blue-star-300">$12K–$30K</td>
+                        <td className="py-3 px-2">$8K–$20K</td>
+                        <td className="py-3 px-2 text-gray-400">Early-stage policies</td>
+                      </tr>
+                      <tr className="border-b border-gray-800 bg-white bg-opacity-5">
+                        <td className="py-3 px-2 font-semibold">2</td>
+                        <td className="py-3 px-2">$20K–$40K</td>
+                        <td className="py-3 px-2 text-blue-star-300">$40K–$80K</td>
+                        <td className="py-3 px-2">$25K–$55K</td>
+                        <td className="py-3 px-2 text-gray-400">Liquidity improves</td>
+                      </tr>
+                      <tr className="border-b border-gray-800">
+                        <td className="py-3 px-2 font-semibold">3</td>
+                        <td className="py-3 px-2">$25K–$50K</td>
+                        <td className="py-3 px-2 text-blue-star-300">$70K–$130K</td>
+                        <td className="py-3 px-2">$45K–$90K</td>
+                        <td className="py-3 px-2 text-gray-400">Eligible for internal loans</td>
+                      </tr>
+                      <tr className="border-b border-gray-800 bg-white bg-opacity-5">
+                        <td className="py-3 px-2 font-semibold">4</td>
+                        <td className="py-3 px-2">$25K–$50K</td>
+                        <td className="py-3 px-2 text-blue-star-300">$100K–$180K</td>
+                        <td className="py-3 px-2">$70K–$125K</td>
+                        <td className="py-3 px-2 text-gray-400">Dividend compounding begins</td>
+                      </tr>
+                      <tr className="border-b border-gray-800">
+                        <td className="py-3 px-2 font-semibold">5</td>
+                        <td className="py-3 px-2">$30K–$60K</td>
+                        <td className="py-3 px-2 text-green-300 font-semibold">$150K–$250K</td>
+                        <td className="py-3 px-2">$100K–$170K</td>
+                        <td className="py-3 px-2 text-gray-400">First major funding ops</td>
+                      </tr>
+                      <tr className="border-b border-gray-800 bg-white bg-opacity-5">
+                        <td className="py-3 px-2 font-semibold">6</td>
+                        <td className="py-3 px-2">$30K–$60K</td>
+                        <td className="py-3 px-2 text-green-300 font-semibold">$200K–$380K</td>
+                        <td className="py-3 px-2">$135K–$260K</td>
+                        <td className="py-3 px-2 text-gray-400">Supports property deals</td>
+                      </tr>
+                      <tr className="bg-green-900 bg-opacity-30">
+                        <td className="py-3 px-2 font-bold">7</td>
+                        <td className="py-3 px-2 font-bold">$35K–$70K</td>
+                        <td className="py-3 px-2 font-bold text-green-300 text-lg">$300K–$600K</td>
+                        <td className="py-3 px-2 font-bold">$200K–$400K</td>
+                        <td className="py-3 px-2 font-semibold">Self-banking maturity</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+
+              {/* Close Button */}
+              <div className="text-center pt-4">
+                <button
+                  onClick={() => setShowPensionModal(false)}
                   className="bg-gray-200 text-gray-700 px-8 py-3 rounded-lg font-semibold hover:bg-gray-300 transition"
                 >
                   Close
