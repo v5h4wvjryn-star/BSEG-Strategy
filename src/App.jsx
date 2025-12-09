@@ -1,6 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 function App() {
+  const [showBSHIModal, setShowBSHIModal] = useState(false);
+
   return (
     <div className="min-h-screen bg-gradient-to-b from-white to-gray-50">
       {/* Navigation */}
@@ -156,6 +158,15 @@ function App() {
                     <div>✓ Low capital requirement</div>
                     <div>✓ Immediate credibility</div>
                   </div>
+                </div>
+
+                <div className="mt-6">
+                  <button
+                    onClick={() => setShowBSHIModal(true)}
+                    className="bg-blue-star-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-star-700 transition shadow-md hover:shadow-lg"
+                  >
+                    Read Full Business Plan →
+                  </button>
                 </div>
               </div>
             </div>
@@ -676,6 +687,310 @@ function App() {
           </div>
         </div>
       </footer>
+
+      {/* BSHI Business Plan Modal */}
+      {showBSHIModal && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4" onClick={() => setShowBSHIModal(false)}>
+          <div className="bg-white rounded-2xl max-w-5xl max-h-[90vh] overflow-y-auto shadow-2xl" onClick={(e) => e.stopPropagation()}>
+            <div className="sticky top-0 bg-gradient-to-r from-blue-star-600 to-blue-star-700 text-white p-6 rounded-t-2xl flex justify-between items-start">
+              <div>
+                <h2 className="text-3xl font-bold mb-2">Blue Star Heritage Insurance</h2>
+                <p className="text-blue-star-100">Independent Agency | Commercial | Public Sector | Real Estate | Personal Lines</p>
+              </div>
+              <button
+                onClick={() => setShowBSHIModal(false)}
+                className="text-white hover:text-gray-200 text-3xl font-bold ml-4"
+              >
+                ×
+              </button>
+            </div>
+
+            <div className="p-8 space-y-8">
+              {/* Introduction */}
+              <div className="prose max-w-none">
+                <p className="text-lg text-gray-700 leading-relaxed">
+                  Blue Star Heritage Insurance (BSHI) is a Texas-based independent insurance agency built to serve families, businesses, investors, and the public institutions that support our communities. We combine modern technology, deep industry knowledge, and a relationship-driven approach to deliver the kind of long-term insurance partnership that clients rarely experience today.
+                </p>
+                <p className="text-gray-700 leading-relaxed">
+                  We provide comprehensive coverage solutions across personal lines, commercial lines, real estate portfolios, private lenders, and government and municipal entities.
+                </p>
+                <p className="text-xl font-bold text-blue-star-700 mt-6">
+                  Our mission is simple: protect the people and organizations that build Texas.
+                </p>
+              </div>
+
+              {/* Who We Serve */}
+              <div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-6 flex items-center">
+                  <span className="text-blue-star-600 mr-2">⭐</span>
+                  Who We Serve
+                </h3>
+
+                <div className="space-y-6">
+                  {/* Personal Insurance */}
+                  <div className="bg-blue-star-50 p-6 rounded-xl">
+                    <h4 className="text-xl font-bold text-gray-900 mb-3">Personal Insurance</h4>
+                    <p className="text-gray-700 mb-3">We provide coverage for:</p>
+                    <ul className="space-y-2 text-gray-700">
+                      <li>• Homeowners & renters</li>
+                      <li>• Auto and motorcycle</li>
+                      <li>• Umbrella liability</li>
+                      <li>• Specialty assets and valuables</li>
+                    </ul>
+                    <p className="text-sm text-gray-600 mt-3 italic">
+                      Our personal lines division focuses on education, transparency, and long-term relationships, not transactional sales.
+                    </p>
+                  </div>
+
+                  {/* Commercial Insurance */}
+                  <div className="bg-gray-50 p-6 rounded-xl">
+                    <h4 className="text-xl font-bold text-gray-900 mb-3">Commercial Insurance</h4>
+                    <p className="text-gray-700 mb-3">BSHI specializes in small and mid-sized business coverage, including:</p>
+                    <div className="grid md:grid-cols-2 gap-3 text-gray-700">
+                      <div>• General liability</div>
+                      <div>• Workers' compensation</div>
+                      <div>• Property & equipment</div>
+                      <div>• Fleet & commercial auto</div>
+                      <div>• Professional liability</div>
+                      <div>• Cybersecurity coverage</div>
+                    </div>
+                    <p className="text-sm text-gray-600 mt-3 italic">
+                      We help businesses understand risk, reduce exposure, and build durable coverage strategies as they scale.
+                    </p>
+                  </div>
+
+                  {/* Government & Municipal */}
+                  <div className="bg-blue-star-600 text-white p-6 rounded-xl">
+                    <h4 className="text-xl font-bold mb-3 flex items-center">
+                      <span className="mr-2">⭐</span>
+                      Government & Municipal Insurance
+                      <span className="ml-3 text-xs bg-white text-blue-star-600 px-2 py-1 rounded">NEW</span>
+                    </h4>
+                    <p className="mb-3">BSHI supports the organizations that serve Texas communities.</p>
+                    <p className="font-semibold mb-2">We offer tailored programs for:</p>
+                    <div className="grid md:grid-cols-2 gap-2 mb-4">
+                      <div>• Cities & towns (all sizes)</div>
+                      <div>• Counties</div>
+                      <div>• Utility & water districts</div>
+                      <div>• Special purpose districts</div>
+                      <div>• Public housing authorities</div>
+                      <div>• Transportation authorities</div>
+                      <div>• Parks & recreation departments</div>
+                      <div>• Public works divisions</div>
+                    </div>
+                    <p className="font-semibold mb-2 text-blue-star-100">Common coverage includes:</p>
+                    <div className="grid md:grid-cols-2 gap-2 text-sm">
+                      <div>• Public entity liability</div>
+                      <div>• Property & infrastructure</div>
+                      <div>• Law enforcement liability</div>
+                      <div>• Public officials liability</div>
+                      <div>• Fleet and emergency vehicles</div>
+                      <div>• Water/sewer utilities</div>
+                      <div>• Parks & event risk</div>
+                    </div>
+                    <div className="mt-4 bg-white bg-opacity-10 p-4 rounded-lg">
+                      <p className="font-bold mb-2">Why this matters:</p>
+                      <p className="text-sm">
+                        Municipal clients require reliability, compliance, and ongoing partnership — all strengths of BSHI. Government accounts are long-term relationships that reward exceptional service, responsiveness, and stability.
+                      </p>
+                    </div>
+                  </div>
+
+                  {/* Real Estate Investors */}
+                  <div className="bg-gray-50 p-6 rounded-xl">
+                    <h4 className="text-xl font-bold text-gray-900 mb-3">Real Estate Investors & Private Lenders</h4>
+                    <p className="text-gray-700 mb-3">We offer tailored programs for:</p>
+                    <div className="grid md:grid-cols-2 gap-3 text-gray-700">
+                      <div>• Single-family portfolios</div>
+                      <div>• Multifamily assets</div>
+                      <div>• Short-term rentals</div>
+                      <div>• Landlords & property managers</div>
+                      <div>• Hard money lenders</div>
+                      <div>• Private lenders</div>
+                    </div>
+                    <p className="text-sm text-gray-600 mt-3 italic">
+                      This complements future Blue Star FinCo lending and property holding initiatives inside the BSEG ecosystem.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Strategic Advantage */}
+              <div className="bg-gradient-to-br from-green-50 to-emerald-50 p-6 rounded-xl border-2 border-green-200">
+                <h3 className="text-2xl font-bold text-gray-900 mb-4 flex items-center">
+                  <span className="text-green-600 mr-2">⭐</span>
+                  Strategic Advantage: Public Sector Focus
+                </h3>
+                <p className="text-gray-700 mb-4">Adding government and municipal risk management provides key benefits:</p>
+                <div className="space-y-2 text-gray-700">
+                  <div className="flex items-start">
+                    <span className="text-green-600 mr-2 font-bold">✓</span>
+                    <span>Stable, long-term accounts with high retention rates</span>
+                  </div>
+                  <div className="flex items-start">
+                    <span className="text-green-600 mr-2 font-bold">✓</span>
+                    <span>Multi-line policies, increasing revenue per client</span>
+                  </div>
+                  <div className="flex items-start">
+                    <span className="text-green-600 mr-2 font-bold">✓</span>
+                    <span>Powerful referral ecosystem into contractors, vendors, and local businesses</span>
+                  </div>
+                  <div className="flex items-start">
+                    <span className="text-green-600 mr-2 font-bold">✓</span>
+                    <span>Aligns with BSEG's mission to strengthen Texas communities</span>
+                  </div>
+                  <div className="flex items-start">
+                    <span className="text-green-600 mr-2 font-bold">✓</span>
+                    <span>Positions BSHI as a comprehensive commercial agency</span>
+                  </div>
+                </div>
+              </div>
+
+              {/* 5-7 Year Strategic Plan */}
+              <div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-6 flex items-center">
+                  <span className="text-blue-star-600 mr-2">⭐</span>
+                  5–7 Year Strategic Plan
+                </h3>
+
+                <div className="space-y-6">
+                  {/* Phase 1 */}
+                  <div className="border-l-4 border-blue-star-500 pl-6 bg-blue-star-50 p-6 rounded-r-xl">
+                    <div className="flex items-center mb-3">
+                      <span className="bg-blue-star-600 text-white px-3 py-1 rounded-full text-sm font-bold mr-3">Phase 1</span>
+                      <h4 className="text-xl font-bold text-gray-900">Years 1–2: Foundation & Learning</h4>
+                    </div>
+                    <ul className="space-y-2 text-gray-700">
+                      <li>• Build core book: personal lines, small commercial, investor portfolios</li>
+                      <li>• Identify 5–10 cities, towns, or districts as pipeline targets</li>
+                      <li>• Establish relationships with city managers, purchasing directors, risk managers</li>
+                      <li>• Attend local government, chamber, and civic meetings</li>
+                      <li>• Develop municipal insurance knowledge base and carrier relationships</li>
+                    </ul>
+                    <div className="mt-4 bg-white p-4 rounded-lg">
+                      <p className="font-bold text-gray-900">Goal:</p>
+                      <p className="text-gray-700">Build a $400K–$600K book of business and position BSHI as a relationship-centric agency with expanding capabilities.</p>
+                    </div>
+                  </div>
+
+                  {/* Phase 2 */}
+                  <div className="border-l-4 border-blue-star-600 pl-6 bg-gray-50 p-6 rounded-r-xl">
+                    <div className="flex items-center mb-3">
+                      <span className="bg-blue-star-700 text-white px-3 py-1 rounded-full text-sm font-bold mr-3">Phase 2</span>
+                      <h4 className="text-xl font-bold text-gray-900">Years 3–5: Commercial & Early Municipal</h4>
+                    </div>
+                    <ul className="space-y-2 text-gray-700">
+                      <li>• Actively pursue small and mid-sized public entities</li>
+                      <li>• Bid on utility districts, small towns, and special districts</li>
+                      <li>• Create formal RFP/RFQ response templates</li>
+                      <li>• Establish dedicated public sector carrier appointments</li>
+                      <li>• Grow real estate + investor segment for stability</li>
+                    </ul>
+                    <div className="mt-4 bg-white p-4 rounded-lg border-2 border-green-300">
+                      <p className="font-bold text-gray-900 mb-2">Targets by end of Year 5:</p>
+                      <div className="grid md:grid-cols-2 gap-3 text-gray-700">
+                        <div>→ 2–5 municipal/public entity accounts</div>
+                        <div>→ $300K–$600K in municipal GWP</div>
+                        <div>→ Total agency GWP: $1.5M–$3M</div>
+                        <div>→ Strong cash flow supporting expansion</div>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Phase 3 */}
+                  <div className="border-l-4 border-blue-star-800 pl-6 bg-gradient-to-br from-blue-star-600 to-blue-star-700 text-white p-6 rounded-r-xl">
+                    <div className="flex items-center mb-3">
+                      <span className="bg-white text-blue-star-700 px-3 py-1 rounded-full text-sm font-bold mr-3">Phase 3</span>
+                      <h4 className="text-xl font-bold">Years 5–7: Full Public Sector Verticalization</h4>
+                    </div>
+                    <ul className="space-y-2">
+                      <li>• Create a Public Entity division inside BSHI</li>
+                      <li>• Hire/train commercial producer specializing in public sector risk</li>
+                      <li>• Move upstream into larger cities, counties, and authorities</li>
+                      <li>• Bundle services with BSEG entities (FinCo, property management)</li>
+                      <li>• Develop long-term municipal relationships (10+ year clients)</li>
+                    </ul>
+                    <div className="mt-4 bg-white bg-opacity-10 backdrop-blur p-4 rounded-lg">
+                      <p className="font-bold mb-2">Targets by Year 7:</p>
+                      <div className="space-y-1 text-sm">
+                        <div>→ 10–20 government/public entity accounts</div>
+                        <div>→ $1M–$2M GWP from public sector alone</div>
+                        <div>→ Total agency GWP: $4M–$6M+</div>
+                        <div>→ Annual commissions from public sector: $120K–$300K+</div>
+                        <div className="font-bold mt-2 text-lg">→ Strong recurring, recession-resistant revenue base</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Financial Model */}
+              <div className="bg-gray-900 text-white p-6 rounded-xl">
+                <h3 className="text-2xl font-bold mb-6">Financial Model (Industry Standard, New Agency)</h3>
+
+                <div className="grid md:grid-cols-3 gap-6">
+                  <div className="bg-white bg-opacity-10 p-4 rounded-lg">
+                    <h4 className="font-bold text-lg mb-3 text-blue-star-300">Years 1–2</h4>
+                    <div className="space-y-2 text-sm">
+                      <div>GWP: $400K–$600K</div>
+                      <div>Commissions: $40K–$80K</div>
+                      <div>Expenses: Low (founders only)</div>
+                      <div className="font-bold text-green-300">Margin: 50–70%</div>
+                    </div>
+                  </div>
+
+                  <div className="bg-white bg-opacity-10 p-4 rounded-lg">
+                    <h4 className="font-bold text-lg mb-3 text-blue-star-300">Years 3–5</h4>
+                    <div className="space-y-2 text-sm">
+                      <div>GWP: $1.5M–$3M</div>
+                      <div>Commissions: $180K–$360K</div>
+                      <div>Add minimal staff</div>
+                      <div className="font-bold text-green-300">Margin: 35–55%</div>
+                    </div>
+                  </div>
+
+                  <div className="bg-gradient-to-br from-green-500 to-emerald-600 p-4 rounded-lg">
+                    <h4 className="font-bold text-lg mb-3">Years 5–7</h4>
+                    <div className="space-y-2 text-sm">
+                      <div>GWP: $4M–$6M+</div>
+                      <div>Commissions: $500K–$750K+</div>
+                      <div>Public sector = major component</div>
+                      <div className="font-bold text-white">Margin: 35–50%</div>
+                    </div>
+                  </div>
+                </div>
+
+                <p className="mt-6 text-center text-lg">
+                  BSHI becomes a strong, low-employee, long-term revenue engine for BSEG, feeding both FinCo (future lending) and Property Holdings (future acquisitions).
+                </p>
+              </div>
+
+              {/* Call to Action */}
+              <div className="bg-gradient-to-r from-blue-star-600 to-blue-star-700 text-white p-6 rounded-xl text-center">
+                <p className="text-lg mb-4">Learn more about Howard Reid, Managing Partner</p>
+                <a
+                  href="https://www.linkedin.com/in/howardareid"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-block bg-white text-blue-star-700 px-6 py-3 rounded-lg font-semibold hover:bg-blue-star-50 transition shadow-lg"
+                >
+                  View LinkedIn Profile →
+                </a>
+              </div>
+
+              {/* Close Button */}
+              <div className="text-center pt-4">
+                <button
+                  onClick={() => setShowBSHIModal(false)}
+                  className="bg-gray-200 text-gray-700 px-8 py-3 rounded-lg font-semibold hover:bg-gray-300 transition"
+                >
+                  Close
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
