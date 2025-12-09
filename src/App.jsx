@@ -100,7 +100,7 @@ function App() {
                   <p className="text-gray-600">Strategy, Finance, Systems, Governance</p>
                 </div>
                 <div className="bg-white p-6 rounded-lg shadow-sm">
-                  <h4 className="font-bold text-xl text-blue-star-700 mb-2">Daron Mcbee</h4>
+                  <h4 className="font-bold text-xl text-blue-star-700 mb-2">Daron McBee</h4>
                   <p className="text-gray-600">Sales, Partnerships, Insurance, Client Acquisition</p>
                 </div>
               </div>
@@ -258,20 +258,20 @@ function App() {
             </div>
 
             {/* Division 5 - Pension Trust */}
-            <div className="bg-gradient-to-br from-blue-star-500 to-blue-star-700 border border-blue-star-400 rounded-2xl p-8 hover:shadow-xl hover:shadow-blue-star-400/40 transition-all duration-300 group">
+            <div className="bg-gray-800 bg-opacity-50 backdrop-blur border border-gray-700 rounded-2xl p-8 hover:border-blue-star-500 hover:shadow-lg hover:shadow-blue-star-500/20 transition-all duration-300 group">
               <div className="mb-6">
-                <svg className="w-12 h-12 text-white mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-12 h-12 text-blue-star-400 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
                 </svg>
                 <h3 className="text-2xl font-bold text-white mb-3">Blue Star Pension Trust</h3>
-                <p className="text-white leading-relaxed mb-6">
+                <p className="text-gray-300 leading-relaxed mb-6">
                   Generational wealth engine launching Years 5-7. Owns life insurance, accumulates cash value, holds real estate entities, and receives profit distributions. Provides legal asset protection, tax-advantaged growth, and ensures 50-year family wealth legacy.
                 </p>
               </div>
               <div className="space-y-3">
                 <button
                   onClick={() => setShowPensionModal(true)}
-                  className="w-full bg-white bg-opacity-20 hover:bg-opacity-30 text-white font-semibold flex items-center justify-center group-hover:translate-x-1 transition-all px-4 py-2 rounded-lg"
+                  className="w-full text-blue-star-400 hover:text-blue-star-300 font-semibold flex items-center justify-center group-hover:translate-x-1 transition-transform"
                 >
                   Read Full Business Plan
                   <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -280,7 +280,7 @@ function App() {
                 </button>
                 <a
                   href="#"
-                  className="w-full bg-white bg-opacity-10 hover:bg-opacity-20 text-white font-semibold flex items-center justify-center group-hover:translate-x-1 transition-all px-4 py-2 rounded-lg"
+                  className="w-full text-gray-400 hover:text-white font-semibold flex items-center justify-center group-hover:translate-x-1 transition-transform"
                 >
                   Visit Website
                   <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -2151,7 +2151,7 @@ function App() {
                   </div>
                   <div className="bg-blue-50 p-4 rounded-lg md:col-span-2">
                     <h4 className="font-bold text-blue-star-700 mb-2">Founders / Partners</h4>
-                    <p className="text-gray-700">Howard Reid & Daron Mcbee</p>
+                    <p className="text-gray-700">Howard Reid & Daron McBee</p>
                   </div>
                 </div>
                 <div className="bg-gradient-to-r from-blue-star-50 to-blue-100 border-l-4 border-blue-star-600 p-6">
