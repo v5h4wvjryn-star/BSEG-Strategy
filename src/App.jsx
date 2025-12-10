@@ -396,24 +396,8 @@ function App() {
             </div>
 
             {/* Years 2-3 */}
-            <div className="border-l-4 border-blue-star-500 pl-6">
-              <h4 className="text-2xl font-bold text-gray-900 mb-3">Years 2-3: Enter Real Estate</h4>
-              <div className="space-y-2 text-gray-700 mb-4">
-                <p>→ Buy first 1-2 rentals</p>
-                <p>→ Participate in no-cash flip partnerships</p>
-                <p>→ Write insurance + earn commissions</p>
-                <p>→ Build rental underwriting systems</p>
-              </div>
-              <div className="bg-green-50 border border-green-200 rounded-lg p-4">
-                <p className="font-bold text-green-800">Target by End of Year 3:</p>
-                <p className="text-green-700">RE equity: $150K-$300K</p>
-                <p className="text-green-700">Cash flow: $1K-$3K/month</p>
-              </div>
-            </div>
-
-            {/* Years 3-5 */}
             <div className="border-l-4 border-blue-star-600 pl-6">
-              <h4 className="text-2xl font-bold text-gray-900 mb-3">Years 3-5: Launch FinCo</h4>
+              <h4 className="text-2xl font-bold text-gray-900 mb-3">Years 2-3: Launch FinCo</h4>
               <div className="space-y-2 text-gray-700 mb-4">
                 <p>→ Start lending with $100-$250K of partner capital</p>
                 <p>→ Offer 12-14% loans with 2-4 points</p>
@@ -422,9 +406,25 @@ function App() {
                 <p>→ Build reputation as "Blue Star Lending Group"</p>
               </div>
               <div className="bg-green-50 border border-green-200 rounded-lg p-4">
-                <p className="font-bold text-green-800">Target by End of Year 5:</p>
+                <p className="font-bold text-green-800">Target by End of Year 3:</p>
                 <p className="text-green-700">FinCo interest income: $75K-$140K/year</p>
                 <p className="text-green-700">BSHI commissions from financed projects: $20K-$40K/year</p>
+              </div>
+            </div>
+
+            {/* Years 3-5 */}
+            <div className="border-l-4 border-blue-star-500 pl-6">
+              <h4 className="text-2xl font-bold text-gray-900 mb-3">Years 3-5: Enter Real Estate</h4>
+              <div className="space-y-2 text-gray-700 mb-4">
+                <p>→ Buy first 1-2 rentals</p>
+                <p>→ Participate in no-cash flip partnerships</p>
+                <p>→ Write insurance + earn commissions</p>
+                <p>→ Build rental underwriting systems</p>
+              </div>
+              <div className="bg-green-50 border border-green-200 rounded-lg p-4">
+                <p className="font-bold text-green-800">Target by End of Year 5:</p>
+                <p className="text-green-700">RE equity: $150K-$300K</p>
+                <p className="text-green-700">Cash flow: $1K-$3K/month</p>
               </div>
             </div>
           </div>
