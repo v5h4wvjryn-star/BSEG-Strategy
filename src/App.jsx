@@ -102,8 +102,8 @@ function App() {
                 </div>
                 <div className="bg-white p-6 rounded-lg shadow-sm">
                   <h4 className="font-bold text-xl text-blue-star-700 mb-1">Daron McBee</h4>
-                  <p className="text-sm font-medium text-gray-500 mb-2">Chief Executive Officer (CEO)</p>
-                  <p className="text-gray-600">Sales, Partnerships, Client Acquisition</p>
+                  <p className="text-sm font-medium text-gray-500 mb-3">Chief Executive Officer (CEO)</p>
+                  <p className="text-gray-600 leading-relaxed">Daron leads Blue Star Equity Group with a focus on acquiring strong service-based businesses, improving operations, and building long-term value for employees, customers, and investors. He brings hands-on leadership experience in building teams, scaling operations, and creating disciplined processes that turn small businesses into sustainable, profitable organizations within the BSEG ecosystem.</p>
                 </div>
                 <div className="bg-white p-6 rounded-lg shadow-sm">
                   <h4 className="font-bold text-xl text-blue-star-700 mb-1">Dana McBee</h4>
