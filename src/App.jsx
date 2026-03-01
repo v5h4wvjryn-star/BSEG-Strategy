@@ -97,8 +97,8 @@ function App() {
               <div className="grid md:grid-cols-2 gap-6">
                 <div className="bg-white p-6 rounded-lg shadow-sm">
                   <h4 className="font-bold text-xl text-blue-star-700 mb-1">Howard Reid</h4>
-                  <p className="text-sm font-medium text-gray-500 mb-2">Chief Information Officer (CIO)</p>
-                  <p className="text-gray-600">Strategy, Systems, Governance</p>
+                  <p className="text-sm font-medium text-gray-500 mb-3">Chief Information Officer (CIO)</p>
+                  <p className="text-gray-600 leading-relaxed">Howard Reid is a senior technology and strategy leader with more than 25 years of experience delivering enterprise IT transformation across energy, manufacturing, healthcare, and service organizations. He specializes in building scalable technology platforms that improve operations, security, and decision-making. At Blue Star Equity Group, Howard leads technology strategy, cybersecurity, AI automation, and operational systems that help each operating company grow efficiently and securely.</p>
                 </div>
                 <div className="bg-white p-6 rounded-lg shadow-sm">
                   <h4 className="font-bold text-xl text-blue-star-700 mb-1">Daron McBee</h4>
