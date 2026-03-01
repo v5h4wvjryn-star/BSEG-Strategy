@@ -97,12 +97,12 @@ function App() {
               <div className="grid md:grid-cols-2 gap-6">
                 <div className="bg-white p-6 rounded-lg shadow-sm">
                   <h4 className="font-bold text-xl text-blue-star-700 mb-1">Howard Reid</h4>
-                  <p className="text-sm font-medium text-gray-500 mb-2">Managing Partner</p>
+                  <p className="text-sm font-medium text-gray-500 mb-2">Chief Information Officer (CIO)</p>
                   <p className="text-gray-600">Strategy, Systems, Governance</p>
                 </div>
                 <div className="bg-white p-6 rounded-lg shadow-sm">
                   <h4 className="font-bold text-xl text-blue-star-700 mb-1">Daron McBee</h4>
-                  <p className="text-sm font-medium text-gray-500 mb-2">Managing Partner</p>
+                  <p className="text-sm font-medium text-gray-500 mb-2">Chief Executive Officer (CEO)</p>
                   <p className="text-gray-600">Sales, Partnerships, Client Acquisition</p>
                 </div>
                 <div className="bg-white p-6 rounded-lg shadow-sm">
@@ -112,7 +112,7 @@ function App() {
                 </div>
                 <div className="bg-white p-6 rounded-lg shadow-sm">
                   <h4 className="font-bold text-xl text-blue-star-700 mb-1">Donna Reid</h4>
-                  <p className="text-sm font-medium text-gray-500 mb-3">Director of Program Management (PMO)</p>
+                  <p className="text-sm font-medium text-gray-500 mb-3">Chief Operating Officer (COO)</p>
                   <p className="text-gray-600 leading-relaxed">Donna Reid is a seasoned program and project management leader with years of experience building and running PMO functions. She brings structure, accountability, and execution rigor to complex initiatives—aligning stakeholders, timelines, budgets, and outcomes. At BSEG, Donna oversees the project portfolio across the holding company and operating companies, ensuring initiatives are delivered on time and on budget, while also managing key vendor relationships to drive performance, cost discipline, and results.</p>
                 </div>
               </div>
