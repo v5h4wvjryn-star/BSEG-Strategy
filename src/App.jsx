@@ -96,9 +96,9 @@ function App() {
               <p className="mb-6">BSEG is led by an experienced executive team committed to disciplined growth, operational excellence, and long-term value creation:</p>
               <div className="grid md:grid-cols-2 gap-6">
                 <div className="bg-white p-6 rounded-lg shadow-sm">
-                  <h4 className="font-bold text-xl text-blue-star-700 mb-1">Howard Reid</h4>
-                  <p className="text-sm font-medium text-gray-500 mb-3">Chief Information Officer (CIO)</p>
-                  <p className="text-gray-600 leading-relaxed">Howard Reid is a senior technology and strategy leader with more than 25 years of experience delivering enterprise IT transformation across energy, manufacturing, healthcare, and service organizations. He specializes in building scalable technology platforms that improve operations, security, and decision-making. At Blue Star Equity Group, Howard leads technology strategy, cybersecurity, AI automation, and operational systems that help each operating company grow efficiently and securely.</p>
+                  <h4 className="font-bold text-xl text-blue-star-700 mb-1">Donna Reid</h4>
+                  <p className="text-sm font-medium text-gray-500 mb-3">Chief Operating Officer (COO)</p>
+                  <p className="text-gray-600 leading-relaxed">Donna Reid is a seasoned program and project management leader with years of experience building and running PMO functions. She brings structure, accountability, and execution rigor to complex initiatives—aligning stakeholders, timelines, budgets, and outcomes. At BSEG, Donna oversees the project portfolio across the holding company and operating companies, ensuring initiatives are delivered on time and on budget, while also managing key vendor relationships to drive performance, cost discipline, and results.</p>
                 </div>
                 <div className="bg-white p-6 rounded-lg shadow-sm">
                   <h4 className="font-bold text-xl text-blue-star-700 mb-1">Daron McBee</h4>
@@ -111,9 +111,9 @@ function App() {
                   <p className="text-gray-600 leading-relaxed">Dana McBee brings deep experience across banking, credit unions, and education, combining disciplined financial stewardship with a servant-leader mindset. She has led credit union operations and teams, building strong lending practices, member-focused service models, and resilient financial controls. At BSEG, Dana oversees all financial functions, including accounting, budgeting, treasury, reporting, and capital strategy—ensuring each operating company is structured for profitability, compliance, and scalable growth.</p>
                 </div>
                 <div className="bg-white p-6 rounded-lg shadow-sm">
-                  <h4 className="font-bold text-xl text-blue-star-700 mb-1">Donna Reid</h4>
-                  <p className="text-sm font-medium text-gray-500 mb-3">Chief Operating Officer (COO)</p>
-                  <p className="text-gray-600 leading-relaxed">Donna Reid is a seasoned program and project management leader with years of experience building and running PMO functions. She brings structure, accountability, and execution rigor to complex initiatives—aligning stakeholders, timelines, budgets, and outcomes. At BSEG, Donna oversees the project portfolio across the holding company and operating companies, ensuring initiatives are delivered on time and on budget, while also managing key vendor relationships to drive performance, cost discipline, and results.</p>
+                  <h4 className="font-bold text-xl text-blue-star-700 mb-1">Howard Reid</h4>
+                  <p className="text-sm font-medium text-gray-500 mb-3">Chief Information Officer (CIO)</p>
+                  <p className="text-gray-600 leading-relaxed">Howard Reid is a senior technology and strategy leader with more than 25 years of experience delivering enterprise IT transformation across energy, manufacturing, healthcare, and service organizations. He specializes in building scalable technology platforms that improve operations, security, and decision-making. At Blue Star Equity Group, Howard leads technology strategy, cybersecurity, AI automation, and operational systems that help each operating company grow efficiently and securely.</p>
                 </div>
               </div>
             </div>
