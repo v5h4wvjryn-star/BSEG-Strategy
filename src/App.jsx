@@ -93,20 +93,29 @@ function App() {
 
             <div className="bg-gray-50 p-8 rounded-xl">
               <h3 className="text-2xl font-bold text-gray-900 mb-4">Our Leadership</h3>
-              <p className="mb-4">BSEG is owned and led by two Managing Partners, working side by side:</p>
+              <p className="mb-6">BSEG is led by an experienced executive team committed to disciplined growth, operational excellence, and long-term value creation:</p>
               <div className="grid md:grid-cols-2 gap-6">
                 <div className="bg-white p-6 rounded-lg shadow-sm">
-                  <h4 className="font-bold text-xl text-blue-star-700 mb-2">Howard Reid</h4>
-                  <p className="text-gray-600">Strategy, Finance, Systems, Governance</p>
+                  <h4 className="font-bold text-xl text-blue-star-700 mb-1">Howard Reid</h4>
+                  <p className="text-sm font-medium text-gray-500 mb-2">Managing Partner</p>
+                  <p className="text-gray-600">Strategy, Systems, Governance</p>
                 </div>
                 <div className="bg-white p-6 rounded-lg shadow-sm">
-                  <h4 className="font-bold text-xl text-blue-star-700 mb-2">Daron McBee</h4>
-                  <p className="text-gray-600">Sales, Partnerships, Insurance, Client Acquisition</p>
+                  <h4 className="font-bold text-xl text-blue-star-700 mb-1">Daron McBee</h4>
+                  <p className="text-sm font-medium text-gray-500 mb-2">Managing Partner</p>
+                  <p className="text-gray-600">Sales, Partnerships, Client Acquisition</p>
+                </div>
+                <div className="bg-white p-6 rounded-lg shadow-sm">
+                  <h4 className="font-bold text-xl text-blue-star-700 mb-1">Dana McBee</h4>
+                  <p className="text-sm font-medium text-gray-500 mb-3">Chief Financial Officer (CFO)</p>
+                  <p className="text-gray-600 leading-relaxed">Dana McBee brings deep experience across banking, credit unions, and education, combining disciplined financial stewardship with a servant-leader mindset. She has led credit union operations and teams, building strong lending practices, member-focused service models, and resilient financial controls. At BSEG, Dana oversees all financial functions, including accounting, budgeting, treasury, reporting, and capital strategy—ensuring each operating company is structured for profitability, compliance, and scalable growth.</p>
+                </div>
+                <div className="bg-white p-6 rounded-lg shadow-sm">
+                  <h4 className="font-bold text-xl text-blue-star-700 mb-1">Donna Reid</h4>
+                  <p className="text-sm font-medium text-gray-500 mb-3">Director of Program Management (PMO)</p>
+                  <p className="text-gray-600 leading-relaxed">Donna Reid is a seasoned program and project management leader with years of experience building and running PMO functions. She brings structure, accountability, and execution rigor to complex initiatives—aligning stakeholders, timelines, budgets, and outcomes. At BSEG, Donna oversees the project portfolio across the holding company and operating companies, ensuring initiatives are delivered on time and on budget, while also managing key vendor relationships to drive performance, cost discipline, and results.</p>
                 </div>
               </div>
-              <p className="mt-6 text-sm text-gray-600 italic">
-                For the first 5 years, BSEG will be operated solely by these two partners, with hiring done only when required or when preparing for retirement.
-              </p>
             </div>
           </div>
         </div>
