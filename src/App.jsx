@@ -6,20 +6,6 @@ function App() {
   const [showPensionModal, setShowPensionModal] = useState(false);
   const [showPropertyModal, setShowPropertyModal] = useState(false);
   const [showPropertyMgmtModal, setShowPropertyMgmtModal] = useState(false);
-  const [contactForm, setContactForm] = useState({ name: '', email: '', message: '' });
-  const [contactStatus, setContactStatus] = useState('idle'); // idle | sending | success | error
-
-  const handleContactSubmit = (e) => {
-    e.preventDefault();
-    const subject = encodeURIComponent('Message from BSEG Website');
-    const body = encodeURIComponent(
-      `Name: ${contactForm.name}\nEmail: ${contactForm.email}\n\nMessage:\n${contactForm.message}`
-    );
-    window.location.href = `mailto:info@bluestarequitygroup.com?subject=${subject}&body=${body}`;
-    setContactStatus('success');
-    setContactForm({ name: '', email: '', message: '' });
-  };
-
   return (
     <div className="min-h-screen bg-gradient-to-b from-white to-gray-50">
       {/* Navigation */}
@@ -33,7 +19,6 @@ function App() {
               <a href="#about" className="text-gray-700 hover:text-blue-star-600 transition">About</a>
               <a href="#divisions" className="text-gray-700 hover:text-blue-star-600 transition">Divisions</a>
               <a href="#strategy" className="text-gray-700 hover:text-blue-star-600 transition">Strategy</a>
-              <a href="#contact" className="text-gray-700 hover:text-blue-star-600 transition">Contact</a>
             </div>
           </div>
         </div>
@@ -586,92 +571,6 @@ function App() {
         </div>
       </section>
 
-      {/* Contact */}
-      <section id="contact" className="section-container bg-white">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold text-gray-900 mb-2">Contact Us</h2>
-          <div className="w-16 h-1 bg-blue-star-600 mb-10"></div>
-          <div className="grid md:grid-cols-2 gap-8 items-start">
-            {/* Left info card */}
-            <div className="bg-gray-50 border border-gray-200 rounded-2xl p-8">
-              <h3 className="text-xl font-bold text-gray-900 mb-4">Reach Our Team</h3>
-              <p className="text-gray-600 mb-6">
-                We are ready to discuss investment opportunities, partnerships, or any general inquiries.
-              </p>
-              <a href="mailto:info@bluestarequitygroup.com" className="flex items-center gap-2 text-blue-star-600 hover:text-blue-star-700 font-medium transition">
-                <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                </svg>
-                info@bluestarequitygroup.com
-              </a>
-            </div>
-
-            {/* Right form card */}
-            <div className="bg-gray-900 rounded-2xl p-8">
-              <h3 className="text-xl font-bold text-white mb-6">Send Us a Message</h3>
-              {contactStatus === 'success' ? (
-                <div className="text-center py-8">
-                  <div className="text-green-400 text-lg font-semibold mb-2">Message sent successfully!</div>
-                  <p className="text-gray-400">Thank you for reaching out. We'll be in touch soon.</p>
-                  <button
-                    onClick={() => setContactStatus('idle')}
-                    className="mt-6 bg-yellow-400 hover:bg-yellow-300 text-gray-900 font-semibold px-6 py-2 rounded-lg transition"
-                  >
-                    Send another message
-                  </button>
-                </div>
-              ) : (
-                <form onSubmit={handleContactSubmit} className="space-y-5">
-                  <div>
-                    <label className="block text-sm font-medium text-gray-300 mb-1">Full Name</label>
-                    <input
-                      type="text"
-                      required
-                      value={contactForm.name}
-                      onChange={(e) => setContactForm({ ...contactForm, name: e.target.value })}
-                      className="w-full bg-gray-800 border border-gray-700 text-white rounded-lg px-4 py-3 focus:outline-none focus:border-blue-star-400 transition"
-                      placeholder=""
-                    />
-                  </div>
-                  <div>
-                    <label className="block text-sm font-medium text-gray-300 mb-1">Email Address</label>
-                    <input
-                      type="email"
-                      required
-                      value={contactForm.email}
-                      onChange={(e) => setContactForm({ ...contactForm, email: e.target.value })}
-                      className="w-full bg-gray-800 border border-gray-700 text-white rounded-lg px-4 py-3 focus:outline-none focus:border-blue-star-400 transition"
-                      placeholder=""
-                    />
-                  </div>
-                  <div>
-                    <label className="block text-sm font-medium text-gray-300 mb-1">Message</label>
-                    <textarea
-                      required
-                      rows={5}
-                      value={contactForm.message}
-                      onChange={(e) => setContactForm({ ...contactForm, message: e.target.value })}
-                      className="w-full bg-gray-800 border border-gray-700 text-white rounded-lg px-4 py-3 focus:outline-none focus:border-blue-star-400 transition resize-none"
-                    />
-                  </div>
-                  <button
-                    type="submit"
-                    className="w-full bg-yellow-400 hover:bg-yellow-300 text-gray-900 font-semibold py-4 rounded-xl flex items-center justify-center gap-2 transition"
-                  >
-                    Send Message <span>→</span>
-                  </button>
-                  {contactStatus === 'error' && (
-                    <p className="text-red-400 text-sm text-center">
-                      Failed to send your message. Please try again or email us directly.
-                    </p>
-                  )}
-                </form>
-              )}
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Footer */}
       <footer className="bg-gray-900 text-gray-400 py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -686,14 +585,6 @@ function App() {
                 <div><a href="#about" className="hover:text-white transition">About</a></div>
                 <div><a href="#divisions" className="hover:text-white transition">Our Divisions</a></div>
                 <div><a href="#strategy" className="hover:text-white transition">Strategy</a></div>
-                <div><a href="#contact" className="hover:text-white transition">Contact</a></div>
-              </div>
-            </div>
-            <div>
-              <h4 className="text-white font-semibold mb-4">Contact</h4>
-              <div className="space-y-2 text-sm">
-                <div>Email: contact@bluestarequity.com</div>
-                <div>Phone: (123) 456-7890</div>
               </div>
             </div>
           </div>
