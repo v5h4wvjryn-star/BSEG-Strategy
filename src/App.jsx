@@ -19,6 +19,7 @@ function App() {
               <a href="#about" className="text-gray-700 hover:text-blue-star-600 transition">About</a>
               <a href="#divisions" className="text-gray-700 hover:text-blue-star-600 transition">Divisions</a>
               <a href="#strategy" className="text-gray-700 hover:text-blue-star-600 transition">Strategy</a>
+              <a href="#sellers" className="text-gray-700 hover:text-blue-star-600 transition">For Sellers</a>
             </div>
           </div>
         </div>
@@ -170,7 +171,7 @@ function App() {
                 </svg>
                 <h3 className="text-2xl font-bold text-white mb-3">Blue Star FinCo</h3>
                 <p className="text-gray-300 leading-relaxed mb-6">
-                  Private lending division offering hard-money loans (12-14% + points), bridge financing, flip funding, and construction draws. Launches Year 3-4 when BSHI cash flow supports responsible expansion. Double revenue model: earn interest + insurance commissions.
+                  Private lending division providing bridge financing, hard-money loans, fix-and-flip funding, and construction draws for real estate investors. Structured for phased expansion as the BSEG portfolio grows, with a built-in dual revenue model that combines interest income with insurance commissions.
                 </p>
               </div>
               <div className="space-y-3">
@@ -272,7 +273,7 @@ function App() {
                 </svg>
                 <h3 className="text-2xl font-bold text-white mb-3">Blue Star Pension Trust</h3>
                 <p className="text-gray-300 leading-relaxed mb-6">
-                  Generational wealth engine launching Years 5-7. Owns life insurance, accumulates cash value, holds real estate entities, and receives profit distributions. Provides legal asset protection, tax-advantaged growth, and ensures 50-year family wealth legacy.
+                  Long-term capital preservation structure that holds life insurance assets, real estate entities, and profit distributions. Designed for tax-advantaged growth, legal asset protection, and multi-generational wealth continuity across the BSEG enterprise.
                 </p>
               </div>
               <div className="space-y-3">
@@ -374,6 +375,45 @@ function App() {
         </div>
       </section>
 
+      {/* For Business Owners */}
+      <section id="sellers" className="section-container bg-white">
+        <div className="max-w-5xl mx-auto">
+          <h2 className="section-title text-center">Thinking About Selling Your Business?</h2>
+          <p className="text-center text-xl text-gray-600 mb-12 max-w-3xl mx-auto">
+            Blue Star Equity Group acquires service-based businesses from owners who have built something worth preserving.
+          </p>
+          <div className="grid md:grid-cols-3 gap-8 mb-12">
+            <div className="bg-blue-star-50 rounded-xl p-6 text-center">
+              <div className="text-4xl mb-4">🏢</div>
+              <h3 className="font-bold text-xl text-gray-900 mb-3">We Buy Service Businesses</h3>
+              <p className="text-gray-600">Insurance agencies, landscaping, property services, home services, and similar businesses with recurring revenue and strong local reputations.</p>
+            </div>
+            <div className="bg-blue-star-50 rounded-xl p-6 text-center">
+              <div className="text-4xl mb-4">🤝</div>
+              <h3 className="font-bold text-xl text-gray-900 mb-3">We Honor What You Built</h3>
+              <p className="text-gray-600">We protect your customers, retain your team, and continue your legacy — we don't buy businesses to strip them down. We buy them to make them stronger.</p>
+            </div>
+            <div className="bg-blue-star-50 rounded-xl p-6 text-center">
+              <div className="text-4xl mb-4">📋</div>
+              <h3 className="font-bold text-xl text-gray-900 mb-3">Confidential & Straightforward</h3>
+              <p className="text-gray-600">Our process is direct and confidential. No brokers, no pressure. We move with respect for your timeline and clear communication throughout.</p>
+            </div>
+          </div>
+          <div className="bg-gray-900 text-white rounded-2xl p-10 text-center">
+            <h3 className="text-2xl font-bold mb-4">What We Look For</h3>
+            <div className="grid md:grid-cols-2 gap-4 text-left max-w-2xl mx-auto mb-8">
+              <div className="flex items-start"><span className="text-blue-star-400 mr-3 text-xl">✓</span><span>Established service business with 2+ years of operation</span></div>
+              <div className="flex items-start"><span className="text-blue-star-400 mr-3 text-xl">✓</span><span>Revenue between $300K–$5M annually</span></div>
+              <div className="flex items-start"><span className="text-blue-star-400 mr-3 text-xl">✓</span><span>Owner ready to transition within 12–24 months</span></div>
+              <div className="flex items-start"><span className="text-blue-star-400 mr-3 text-xl">✓</span><span>Texas-based or surrounding region preferred</span></div>
+            </div>
+            <a href="mailto:acquisitions@bluestarequitygroup.com" className="inline-block bg-blue-star-500 hover:bg-blue-star-400 text-white font-semibold px-8 py-4 rounded-lg transition">
+              Start a Confidential Conversation
+            </a>
+          </div>
+        </div>
+      </section>
+
       {/* Timeline & Strategy */}
       <section id="strategy" className="section-container bg-gradient-to-b from-gray-50 to-white">
         <h2 className="section-title text-center mb-16">Our 10-Year Strategy</h2>
@@ -382,7 +422,7 @@ function App() {
         <div className="mb-16">
           <div className="bg-blue-star-600 text-white py-4 px-8 rounded-t-xl">
             <h3 className="text-3xl font-bold">Years 1-5: Foundation & Growth</h3>
-            <p className="text-blue-star-100 mt-2">Partner-Led, Lean, High-Profit</p>
+            <p className="text-blue-star-100 mt-2">Principal-Led, Disciplined, Long-Term</p>
           </div>
           <div className="bg-white shadow-xl rounded-b-xl p-8 space-y-8">
             {/* Years 1-2 */}
@@ -392,7 +432,7 @@ function App() {
                 <p>→ Focus on recurring revenue</p>
                 <p>→ Build referral partners (RE agents, flippers, landlords)</p>
                 <p>→ Create strong monthly cash base</p>
-                <p>→ No overhead — just the two partners</p>
+                <p>→ Principal-led operations with lean cost structure</p>
                 <p>→ Build website, CRM, quoting tools</p>
                 <p>→ Underwrite profitable RE-friendly policies</p>
               </div>
@@ -406,7 +446,7 @@ function App() {
             <div className="border-l-4 border-blue-star-600 pl-6">
               <h4 className="text-2xl font-bold text-gray-900 mb-3">Years 2-3: Launch FinCo</h4>
               <div className="space-y-2 text-gray-700 mb-4">
-                <p>→ Start lending with $100-$250K of partner capital</p>
+                <p>→ Launch with disciplined initial capital deployment into low-risk, collateral-backed loans</p>
                 <p>→ Offer 12-14% loans with 2-4 points</p>
                 <p>→ Require BSHI coverage as lending condition</p>
                 <p>→ Finance low-risk flips and rentals</p>
@@ -485,7 +525,7 @@ function App() {
                   </div>
                 </div>
                 <p className="mt-6 text-center text-xl font-bold text-green-900">
-                  True financial independence for both partners
+                  A self-sustaining, multi-division platform delivering strong returns across insurance, lending, and real estate
                 </p>
               </div>
             </div>
@@ -561,10 +601,10 @@ function App() {
                 Blue Star Equity Group is a modern private equity platform built for the next generation of wealth creators. Instead of relying on Wall Street, we combine insurance, real estate, private lending, and trust structures to build stable, long-term, compounding wealth.
               </p>
               <p>
-                Our strategy is simple: <strong>Insurance funds real estate. Real estate enables lending. Lending accelerates cash flow. The Pension Trust preserves it all for our families.</strong>
+                Our strategy is simple: <strong>Insurance funds real estate. Real estate enables lending. Lending accelerates cash flow. The Pension Trust preserves and compounds value across the enterprise.</strong>
               </p>
               <p className="text-xl font-bold text-blue-star-700 text-center pt-4">
-                What begins as two Managing Partners builds into a 50-year legacy.
+                Built for the long term — with the discipline, structure, and vision to grow and sustain value across every business we operate.
               </p>
             </div>
           </div>
@@ -589,7 +629,7 @@ function App() {
             </div>
           </div>
           <div className="border-t border-gray-800 pt-8 text-center text-sm">
-            <p>&copy; 2024 Blue Star Equity Group. All rights reserved.</p>
+            <p>&copy; 2025 Blue Star Equity Group. All rights reserved.</p>
           </div>
         </div>
       </footer>
