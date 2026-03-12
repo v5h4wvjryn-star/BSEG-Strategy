@@ -20,6 +20,7 @@ function App() {
               <a href="#divisions" className="text-gray-700 hover:text-blue-star-600 transition">Divisions</a>
               <a href="#strategy" className="text-gray-700 hover:text-blue-star-600 transition">Strategy</a>
               <a href="#sellers" className="text-gray-700 hover:text-blue-star-600 transition">For Sellers</a>
+              <a href="#contact" className="text-gray-700 hover:text-blue-star-600 transition">Contact</a>
             </div>
           </div>
         </div>
@@ -668,6 +669,23 @@ function App() {
         </div>
       </section>
 
+      {/* Contact Us */}
+      <section id="contact" className="section-container bg-gradient-to-b from-white to-gray-50">
+        <div className="max-w-3xl mx-auto text-center">
+          <h2 className="section-title">Contact Us</h2>
+          <p className="text-xl text-gray-600 mb-10 max-w-2xl mx-auto">
+            Have questions or want to learn more about Blue Star Equity Group? We'd love to hear from you. Click the button below to send us an email.
+          </p>
+          <a
+            href="mailto:info@bluestarequitygroup.com"
+            className="inline-block bg-blue-star-600 hover:bg-blue-star-700 text-white font-semibold px-10 py-5 rounded-lg text-lg transition shadow-lg"
+          >
+            Send Us an Email
+          </a>
+          <p className="mt-6 text-gray-500 text-sm">info@bluestarequitygroup.com</p>
+        </div>
+      </section>
+
       {/* Footer */}
       <footer className="bg-gray-900 text-gray-400 py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -682,6 +700,7 @@ function App() {
                 <div><a href="#about" className="hover:text-white transition">About</a></div>
                 <div><a href="#divisions" className="hover:text-white transition">Our Divisions</a></div>
                 <div><a href="#strategy" className="hover:text-white transition">Strategy</a></div>
+                <div><a href="#contact" className="hover:text-white transition">Contact</a></div>
               </div>
             </div>
           </div>
