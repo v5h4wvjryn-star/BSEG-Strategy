@@ -19,7 +19,7 @@ function App() {
               <a href="#about" className="text-gray-700 hover:text-blue-star-600 transition">About</a>
               <a href="#divisions" className="text-gray-700 hover:text-blue-star-600 transition">Divisions</a>
               <a href="#strategy" className="text-gray-700 hover:text-blue-star-600 transition">Strategy</a>
-              <a href="#sellers" className="text-gray-700 hover:text-blue-star-600 transition">For Sellers</a>
+              {/* <a href="#sellers" className="text-gray-700 hover:text-blue-star-600 transition">For Sellers</a> */}
               <a href="#contact" className="text-gray-700 hover:text-blue-star-600 transition">Contact</a>
             </div>
           </div>
@@ -422,6 +422,7 @@ function App() {
       </section>
 
       {/* For Business Owners */}
+      {/* HIDDEN: For Sellers section
       <section id="sellers" className="section-container bg-gradient-to-b from-gray-50 to-white">
         <div className="max-w-5xl mx-auto">
           <h2 className="section-title text-center">Thinking About Selling Your Business?</h2>
@@ -471,6 +472,7 @@ function App() {
           </div>
         </div>
       </section>
+      END HIDDEN */}
 
       {/* Timeline & Strategy */}
       <section id="strategy" className="section-container bg-gradient-to-b from-gray-50 to-white">
